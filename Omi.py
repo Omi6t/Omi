@@ -67,7 +67,7 @@ logo = """
 def tik():
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\033[1;96m❥ \x1b[1;93mLoading \x1b[1;97m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r\033[1;93m✔\x1b[1;93mLoading \x1b[1;97m"+o),;sys.stdout.flush();time.sleep(1)
 
 
 back = 0
@@ -198,7 +198,7 @@ def menu():
 	print "\033[1;96m👤\033[1;93m Name\033[1;93m: \033[1;92m"+nama+"\033[1;97m               "
 	print "\033[1;96m👤\033[1;93m ID\033[1;93m: \033[1;92m"+id+"\x1b[1;97m              "
 	print "\033[1;96m«--------------------✧--------------------»"
-	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Start Hacking With OMI"
+	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Start Cloning"
 	print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Exit            "
 	pilih()
 
