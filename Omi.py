@@ -58,16 +58,16 @@ logo = """
   \033[1;93m`"Y8888Y"'    \033[1;92m88     `8'     88  \033[1;96m88
 
 \033[1;95m●▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬●
-\033[1;93mAuthor  \033[1;93m: \033[1;92mOmi Chaudhary
-\033[1;93mInstagram \033[1;93m: \033[1;92mhttps://www.Instagram.com/Omi6t
-\033[1;93mFacebook  \033[1;93m: \033[1;92mhttps://www.facebook.com/Omi6t
-\033[1;93mGithub \033[1;93m: \033[1;92mhttps://github.com/Omi6t
+\033[1;93mAuthor©\033[1;93m: \033[1;92mOmi Chaudhary
+\033[1;93mInstagram\033[1;93m: \033[1;92mhttps://www.Instagram.com/Omi6t
+\033[1;93mFacebook\033[1;93m: \033[1;92mhttps://www.facebook.com/Omi6t
+\033[1;93mWhatsapp\033[1;93m: \033[1;92m+923117675174
 \033[1;95m«--------------------✧--------------------»"""
 
 def tik():
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\033[1;96m[â—] \x1b[1;93mLoading \x1b[1;97m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r\033[1;96m✰ \x1b[1;93mLoading \x1b[1;97m"+o),;sys.stdout.flush();time.sleep(1)
 
 
 back = 0
@@ -90,7 +90,7 @@ print  """
 \033[1;93mAuthor©\033[1;93m: \033[1;92mOmi Chaudhary
 \033[1;93mInstagram\033[1;93m: \033[1;92mhttps://www.Instagram.com/Omi6t
 \033[1;93mFacebook\033[1;93m: \033[1;92mhttps://www.Facebook.com/Omi6t
-\033[1;93mGithub\033[1;93m: \033[1;92mhttps://Github.com/Omi6t
+\033[1;93mWhatsapp\033[1;93m: \033[1;92m+923117675174
 \033[1;95m«--------------------✧--------------------»"""
 
 CorrectUsername = "Omi6t"
