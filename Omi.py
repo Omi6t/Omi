@@ -87,10 +87,10 @@ print  """
   \033[1;96m\ V  V / | |___| |__| |__| |_| | |  | | |___ 
    \033[1;96m\_/\_/  |_____|_____\____\___/|_|  |_|_____|
 \033[1;95m●▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬●
-\033[1;93m👤Author\033[1;93m: \033[1;92mOmi Chaudhary
-\033[1;93mInstagram \033[1;93m: \033[1;92mhttps://www.Instagram.com/Omi6t
-\033[1;93mFacebook  \033[1;93m: \033[1;92mhttps://www.Facebook.com/Omi6t
-\033[1;93mGithub \033[1;93m: \033[1;92mhttps://Github.com/Omi6t
+\033[1;93mAuthor©\033[1;93m: \033[1;92mOmi Chaudhary
+\033[1;93mInstagram\033[1;93m: \033[1;92mhttps://www.Instagram.com/Omi6t
+\033[1;93mFacebook\033[1;93m: \033[1;92mhttps://www.Facebook.com/Omi6t
+\033[1;93mGithub\033[1;93m: \033[1;92mhttps://Github.com/Omi6t
 \033[1;95m«--------------------✧--------------------»"""
 
 CorrectUsername = "Omi6t"
