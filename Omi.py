@@ -17,7 +17,7 @@ br.addheaders = [('User-Agent', 'Opera/9.80 (Android; Opera Mini/32.0.2254/85. U
 
 
 def keluar():
-	print "\033[1;96m[!] \x1b[1;91mExit"
+	print "\033[1;91m✘\x1b[1;91mExit"
 	os.sys.exit()
 
 
