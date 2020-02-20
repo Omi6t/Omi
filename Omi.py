@@ -98,9 +98,9 @@ CorrectPassword = "Omi"
 
 loop = 'true'
 while (loop == 'true'):
-    username = raw_input("\033[1;96m🔐\x1b[1;93mTool Username \x1b[1;96m»»")
+    username = raw_input("\033[1;96m🔐 \x1b[1;93mTool Username \x1b[1;96m»»")
     if (username == CorrectUsername):
-    	password = raw_input("\033[1;96m🔐\x1b[1;93mTool Password \x1b[1;96m»»")
+    	password = raw_input("\033[1;96m🔐 \x1b[1;93mTool Password \x1b[1;96m»»")
         if (password == CorrectPassword):
             print "Logged in successfully as " + username
             loop = 'false'
@@ -127,7 +127,7 @@ def login():
 		try:
 			br.open('https://m.facebook.com')
 		except mechanize.URLError:
-			print"\n\033[1;91m✘ \x1b[1;91mThere is no internet connection"
+			print"\n\033[1;91m✘\x1b[1;91mThere is no internet connection"
 			keluar()
 		br._factory.is_html = True
 		br.select_form(nr=0)
@@ -174,7 +174,7 @@ def menu():
 		toket=open('login.txt','r').read()
 	except IOError:
 		os.system('clear')
-		print"\033[1;91m✘ \x1b[1;91mToken invalid"
+		print"\033[1;91m✘\x1b[1;91mToken invalid"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
 		login()
@@ -198,7 +198,7 @@ def menu():
 	print "\033[1;96m👤\033[1;93m Name\033[1;93m: \033[1;92m"+nama+"\033[1;97m               "
 	print "\033[1;96m👤\033[1;93m ID\033[1;93m: \033[1;92m"+id+"\x1b[1;97m              "
 	print "\033[1;96m«--------------------✧--------------------»"
-	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Start Cloning"
+	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Start Cloning..."
 	print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Exit            "
 	pilih()
 
@@ -232,9 +232,9 @@ def super():
 	os.system('clear')
 	print logo
 	print "\033[1;96m«--------------------✧--------------------»"
-	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Crack From Friend List"
-	print "\x1b[1;96m[\x1b[1;92m2\x1b[1;96m]\x1b[1;93m Crack From Any Public ID"
-	print "\x1b[1;96m[\x1b[1;92m3\x1b[1;96m]\x1b[1;93m Crack From File"
+	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Clone From Friend List..."
+	print "\x1b[1;96m[\x1b[1;92m2\x1b[1;96m]\x1b[1;93m Clone From Public ID..."
+	print "\x1b[1;96m[\x1b[1;92m3\x1b[1;96m]\x1b[1;93m Clone From File..."
 	print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Back"
 	pilih_super()
 
@@ -256,16 +256,16 @@ def pilih_super():
 		os.system('clear')
 		print logo
 		print "\033[1;96m«--------------------✧--------------------»"
-		idt = raw_input("\033[1;96m👤\033[1;93mEnter ID \033[1;91m: \033[1;97m")
+		idt = raw_input("\033[1;96m👤\033[1;93mEnter ID\033[1;93m: \033[1;97m")
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			print"\033[1;93m✔\033[1;93mName\033[1;91m :\033[1;97m "+op["name"]
+			print"\033[1;93m✔\033[1;93mName\033[1;93m:\033[1;97m "+op["name"]
 		except KeyError:
 			print"\033[1;91m✘\x1b[1;91mID Not Found!"
 			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
 			super()
-		jalan('\033[1;93m✔\033[1;93mGetting IDs \033[1;97m...')
+		jalan('\033[1;93m✔\033[1;93mGetting IDs\033[1;93m...')
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for i in z['data']:
@@ -288,13 +288,13 @@ def pilih_super():
 		print "\033[1;91m✘\x1b[1;91mFill in correctly"
 		pilih_super()
 	
-	print "\033[1;93m✔\033[1;93mTotal IDs \033[1;91m: \033[1;97m"+str(len(id))
-	jalan('\033[1;93m✔\033[1;93mStarting \033[1;97m...')
+	print "\033[1;93m✔\033[1;93mTotal IDs\033[1;93m: \033[1;97m"+str(len(id))
+	jalan('\033[1;93m✔\033[1;93mStarting\033[1;93m...')
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\033[1;93m✔\033[1;93mCracking \033[1;97m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r\033[1;93m✔\033[1;93mCloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
 	print
-	print('\x1b[1;93m✘\x1b[1;93mTo Stop Process Press CTRL Then Press Z')
+	print('\x1b[1;91m✘\x1b[1;91mTo Stop Process Press CTRL Then Press Z')
 	print "\033[1;96m«--------------------✧--------------------»"
 	
 			
@@ -415,9 +415,9 @@ def pilih_super():
 	p = ThreadPool(30)
 	p.map(main, id)
 	print "\033[1;96m«--------------------✧--------------------»"
-	print '\033[1;92m✔\033[1;92mProcess Has Been Completed \033[1;97m....'
+	print '\033[1;92m✔\033[1;92mProcess Has Been Completed\033[1;92m....'
 	print"\033[1;92m✔\033[1;92mTotal OK/\x1b[1;93mCP \033[1;91m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(cekpoint))
-	print("\033[1;92m✔\033[1;92mCP File Has Been Saved \033[1;91m: \033[1;97mout/checkpoint.txt")
+	print("\033[1;92m✔\033[1;92mCP File Has Been Saved \033[1;92m:\033[1;97mout/checkpoint.txt")
 	raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
 	menu()
 
