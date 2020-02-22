@@ -121,8 +121,8 @@ def login():
 		print logo
 		print('	   \033[1;96m【\x1b[1;96mLOGIN WITH FACEBOOK\x1b[1;96m】' )
 		print(' \033[1;91mWarning: Do Not Use Your Personal Account' )
-		id = raw_input('\033[1;96m🔐 \x1b[1;93mID/Email\x1b[1;93m: \x1b[1;96m')
-		pwd = raw_input('\033[1;96m🔐 \x1b[1;93mPassword\x1b[1;93m: \x1b[1;96m')
+		id = raw_input('\033[1;96m[+] \x1b[1;93mID/Email\x1b[1;93m: \x1b[1;96m')
+		pwd = raw_input('\033[1;96m[+] \x1b[1;93mPassword\x1b[1;93m: \x1b[1;96m')
 		tik()
 		try:
 			br.open('https://m.facebook.com')
@@ -247,7 +247,7 @@ def pilih_super():
 		os.system('clear')
 		print logo
 		print "\033[1;96m«--------------------✧--------------------»"
-		jalan('\033[1;96m👤\033[1;93mGetting ID \033[1;97m...')
+		jalan('\033[1;96m[✺] \033[1;93mGetting ID \033[1;97m...')
 		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for s in z['data']:
@@ -256,7 +256,7 @@ def pilih_super():
 		os.system('clear')
 		print logo
 		print "\033[1;96m«--------------------✧--------------------»"
-		idt = raw_input("\033[1;96m👤\033[1;93mEnter ID\033[1;93m: \033[1;97m")
+		idt = raw_input("\033[1;96m[+] \033[1;93mEnter ID\033[1;93m: \033[1;97m")
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
@@ -265,7 +265,7 @@ def pilih_super():
 			print"\033[1;91m✘\x1b[1;91mID Not Found!"
 			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
 			super()
-		jalan('\033[1;93m✔\033[1;93mGetting IDs\033[1;93m...')
+		jalan('\033[1;93m[✺] \033[1;93mGetting IDs\033[1;93m...')
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for i in z['data']:
@@ -289,7 +289,7 @@ def pilih_super():
 		pilih_super()
 	
 	print "\033[1;93m✔\033[1;93mTotal IDs\033[1;93m: \033[1;97m"+str(len(id))
-	jalan('\033[1;93m✔\033[1;93mStarting\033[1;93m...')
+	jalan('\033[1;93m[✺] \033[1;93mStarting\033[1;93m...')
 	titik = ['.   ','..  ','... ']
 	for o in titik:
 		print("\r\033[1;93m✔\033[1;93mCloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
