@@ -98,9 +98,9 @@ CorrectPassword = "Omi"
 
 loop = 'true'
 while (loop == 'true'):
-    username = raw_input("\033[1;96m🔐 \x1b[1;93mTool Username\x1b[1;93m»» \x1b[1;96m")
+    username = raw_input("\033[1;96m🔐 \x1b[1;93mTool Username \x1b[1;93m»» \x1b[1;96m")
     if (username == CorrectUsername):
-    	password = raw_input("\033[1;96m🔐 \x1b[1;93mTool Password\x1b[1;93m»» \x1b[1;96m")
+    	password = raw_input("\033[1;96m🔐 \x1b[1;93mTool Password \x1b[1;93m»» \x1b[1;96m")
         if (password == CorrectPassword):
             print "Logged in successfully as " + username
             loop = 'false'
@@ -119,9 +119,10 @@ def login():
 	except (KeyError,IOError):
 		os.system('clear')
 		print logo
-		print('	   \033[1;96m【\x1b[1;96mLOGIN WITH FACEBOOK\x1b[1;96m】' )
 		jalan(' \033[1;91mWarning: \033[1;93mDo Not Use Your Personal Account' )
 		jalan('       \033[1;93mUse a Fresh Account To Login' )
+		print "\033[1;96m«--------------------✧--------------------»"
+		print('	   \033[1;96m【\x1b[1;96mLOGIN WITH FACEBOOK\x1b[1;96m】' )
 		id = raw_input('\033[1;96m[+] \x1b[1;93mID/Email\x1b[1;93m: \x1b[1;96m')
 		pwd = raw_input('\033[1;96m[+] \x1b[1;93mPassword\x1b[1;93m: \x1b[1;96m')
 		tik()
