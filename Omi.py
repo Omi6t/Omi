@@ -201,13 +201,13 @@ def menu():
 	print "\033[1;96m👤\033[1;93m Name\033[1;93m: \033[1;92m"+nama+"\033[1;97m               "
 	print "\033[1;96m👤\033[1;93m ID\033[1;93m: \033[1;92m"+id+"\x1b[1;97m              "
 	print "\033[1;96m«--------------------✧--------------------»"
-	print "\033[1;97m--\033[1;91m> \033[1;92m1.\x1b[1;93m Start Cloning..."
-	print "\033[1;97m--\033[1;91m> \033[1;91m0.\x1b[1;91m Exit            "
+	print "\033[1;97m--\033[1;91m> \033[1;92m1.\x1b[1;93mStart Cloning..."
+	print "\033[1;97m--\033[1;91m> \033[1;91m0.\x1b[1;91mExit            "
 	pilih()
 
 
 def pilih():
-	unikers = raw_input("\n\033[1;97m >>> \033[1;97m")
+	unikers = raw_input("\n\033[1;97mChoose an Option >>> \033[1;97m")
 	if unikers =="":
 		print "\033[1;91m✘\x1b[1;91mFill in correctly"
 		pilih()
@@ -235,13 +235,13 @@ def super():
 	os.system('clear')
 	print logo
 	print "\033[1;96m«--------------------✧--------------------»"
-	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Clone From Friend List..."
-	print "\x1b[1;96m[\x1b[1;92m2\x1b[1;96m]\x1b[1;93m Clone From Public ID..."
-	print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Back"
+	print "\033[1;97m--\033[1;91m> \033[1;92m1.\x1b[1;93mClone From Friend List..."
+	print "\033[1;97m--\033[1;91m> \033[1;92m2.\x1b[1;93mClone From Public ID..."
+	print "\033[1;97m--\033[1;91m> \033[1;91m0.\x1b[1;91mBack            "
 	pilih_super()
 
 def pilih_super():
-	peak = raw_input("\n\033[1;97m >>> \033[1;97m")
+	peak = raw_input("\n\033[1;97mChoose an Option >>> \033[1;97m")
 	if peak =="":
 		print "\033[1;91m✘\x1b[1;91mFill in correctly"
 		pilih_super()
