@@ -159,7 +159,7 @@ def login():
 				print"\n\033[1;91m✘\x1b[1;91mThere is no internet connection"
 				keluar()
 		if 'checkpoint' in url:
-			print("\n\033[1;91m✘\x1b[1;91mIt seems that your account has a checkpoint")
+			print("\n\033[1;91m✘\x1b[1;91mYour Account Is on Checkpoint")
 			os.system('rm -rf login.txt')
 			time.sleep(1)
 			keluar()
@@ -187,7 +187,7 @@ def menu():
 		id = a['id']
 	except KeyError:
 		os.system('clear')
-		print"\033[1;91m✘\033[1;91mIt seems that your account has a checkpoint"
+		print"\033[1;91m✘\033[1;91mYour Account Is on Checkpoint"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
 		login()
@@ -236,7 +236,6 @@ def super():
 	print "\033[1;96m«--------------------✧--------------------»"
 	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Clone From Friend List..."
 	print "\x1b[1;96m[\x1b[1;92m2\x1b[1;96m]\x1b[1;93m Clone From Public ID..."
-	print "\x1b[1;96m[\x1b[1;92m3\x1b[1;96m]\x1b[1;93m Clone From File..."
 	print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Back"
 	pilih_super()
 
@@ -272,18 +271,6 @@ def pilih_super():
 		z = json.loads(r.text)
 		for i in z['data']:
 			id.append(i['id'])
-	elif peak =="3":
-		os.system('clear')
-		print logo
-		print "\033[1;96m«--------------------✧--------------------»"
-		try:
-			idlist = raw_input('\x1b[1;96m[+] \x1b[1;93mEnter File Path  \x1b[1;91m: \x1b[1;97m')
-			for line in open(idlist,'r').readlines():
-				id.append(line.strip())
-		except IOError:
-			print '\x1b[1;91m✘\x1b[1;91mFile Not Found'
-			raw_input('\n\x1b[1;96m[ \x1b[1;97mBack \x1b[1;96m]')
-			super()
 	elif peak =="0":
 		menu()
 	else:
@@ -291,7 +278,7 @@ def pilih_super():
 		pilih_super()
 	
 	print "\033[1;93m✔\033[1;93mTotal IDs\033[1;93m: \033[1;97m"+str(len(id))
-	jalan('\033[1;93m[✺] \033[1;93mStarting\033[1;93m...')
+	jalan('\033[1;93mStarting\033[1;93m...')
 	titik = ['.   ','..  ','... ']
 	for o in titik:
 		print("\r\033[1;93m✔\033[1;93mCloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
