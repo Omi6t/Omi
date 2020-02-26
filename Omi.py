@@ -121,7 +121,7 @@ def login():
 		print logo
 		jalan(' \033[1;91mWarning: \033[1;93mDo Not Use Your Personal Account' )
 		jalan('          \033[1;93mUse a Fresh Account To Login' )
-		print "\033[1;95m«--------------------✧--------------------»"
+		print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
 		print('	   \033[1;96m【\x1b[1;96mLOGIN WITH FACEBOOK\x1b[1;96m】' )
 		id = raw_input('\033[1;96m[+] \x1b[1;93mID/Email\x1b[1;93m: \x1b[1;96m')
 		pwd = raw_input('\033[1;96m[+] \x1b[1;93mPassword\x1b[1;93m: \x1b[1;96m')
@@ -197,10 +197,10 @@ def menu():
 	os.system("clear")
 	print logo
 	print('	   \033[1;96m【\x1b[1;96mLogged in User Info\x1b[1;96m】' )
-	print "\033[1;96m«--------------------✧--------------------»"
+	print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
 	print "	 \033[1;93m Name\033[1;93m: \033[1;92m"+nama+"\033[1;97m               "
 	print "	 \033[1;93m ID\033[1;93m: \033[1;92m"+id+"\x1b[1;97m              "
-	print "\033[1;96m«--------------------✧--------------------»"
+	print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
 	print "\033[1;97m--\033[1;92m> \033[1;92m1.\x1b[1;97mStart Cloning..."
 	print "\033[1;97m--\033[1;91m> \033[1;91m0.\x1b[1;91mExit            "
 	pilih()
@@ -234,7 +234,7 @@ def super():
 		login()
 	os.system('clear')
 	print logo
-	print "\033[1;96m«--------------------✧--------------------»"
+	print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
 	print "\033[1;97m--\033[1;92m> \033[1;92m1.\x1b[1;97mClone From Friend List..."
 	print "\033[1;97m--\033[1;92m> \033[1;92m2.\x1b[1;97mClone From Public ID..."
 	print "\033[1;97m--\033[1;91m> \033[1;91m0.\x1b[1;91mBack            "
@@ -248,7 +248,7 @@ def pilih_super():
 	elif peak =="1":
 		os.system('clear')
 		print logo
-		print "\033[1;96m«--------------------✧--------------------»"
+		print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
 		jalan('\033[1;93mGetting ID \033[1;97m...')
 		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
 		z = json.loads(r.text)
@@ -257,7 +257,7 @@ def pilih_super():
 	elif peak =="2":
 		os.system('clear')
 		print logo
-		print "\033[1;96m«--------------------✧--------------------»"
+		print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
 		idt = raw_input("\033[1;96m[+] \033[1;93mEnter ID\033[1;93m: \033[1;97m")
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
@@ -285,7 +285,7 @@ def pilih_super():
 		print("\r\033[1;93m✔\033[1;93mCloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
 	print
 	print('\x1b[1;91m✘\x1b[1;91mTo Stop Process Press CTRL Then Press Z')
-	print "\033[1;96m«--------------------✧--------------------»"
+	print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
 	
 			
 	def main(arg):
@@ -404,7 +404,7 @@ def pilih_super():
 		
 	p = ThreadPool(30)
 	p.map(main, id)
-	print "\033[1;96m«--------------------✧--------------------»"
+	print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
 	print "  \033[1;91m«---------Developed By Omi------------»"
 	print '\033[1;92m✔\033[1;92mProcess Has Been Completed\033[1;92m....'
 	print"\033[1;92m✔\033[1;92mTotal OK/\x1b[1;93mCP \033[1;91m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(cekpoint))
