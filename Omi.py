@@ -122,7 +122,8 @@ def login():
 		jalan(' \033[1;91mWarning: \033[1;97mDo Not Use Your Personal Account' )
 		jalan('          \033[1;97mUse a Fresh Account To Login' )
 		print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
-		print('	   \033[1;97m【\x1b[1;92mLOGIN WITH FACEBOOK\x1b[1;97m】' )
+		print('	   \033[1;92m【\x1b[1;92mLOGIN WITH FACEBOOK\x1b[1;92m】' )
+		print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
 		id = raw_input('\033[1;97m[+] \x1b[1;92mID/Email\x1b[1;92m: \x1b[1;92m')
 		pwd = raw_input('\033[1;97m[+] \x1b[1;92mPassword\x1b[1;92m: \x1b[1;92m')
 		tik()
@@ -196,12 +197,12 @@ def menu():
 		keluar()
 	os.system("clear")
 	print logo
-	print('	   \033[1;96m【\x1b[1;96mLogged in User Info\x1b[1;96m】' )
+	print('	   \033[1;92m【\x1b[1;92mLogged in User Info\x1b[1;92m】' )
 	print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
-	print "	 \033[1;93m Name\033[1;93m: \033[1;92m"+nama+"\033[1;97m               "
-	print "	 \033[1;93m ID\033[1;93m: \033[1;92m"+id+"\x1b[1;97m              "
+	print "	 \033[1;97m Name\033[1;97m: \033[1;92m"+nama+"\033[1;92m               "
+	print "	 \033[1;97m ID\033[1;97m: \033[1;92m"+id+"\x1b[1;92m              "
 	print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
-	print "\033[1;97m--\033[1;92m> \033[1;92m1.\x1b[1;97mStart Cloning..."
+	print "\033[1;97m--\033[1;97m> \033[1;92m1.\x1b[1;92mStart Cloning..."
 	print "\033[1;97m--\033[1;91m> \033[1;91m0.\x1b[1;91mExit            "
 	pilih()
 
@@ -235,8 +236,8 @@ def super():
 	os.system('clear')
 	print logo
 	print "\033[1;97m«--------\033[1;92m------------✧--------------------»"
-	print "\033[1;97m--\033[1;92m> \033[1;92m1.\x1b[1;97mClone From Friend List..."
-	print "\033[1;97m--\033[1;92m> \033[1;92m2.\x1b[1;97mClone From Public ID..."
+	print "\033[1;97m--\033[1;97m> \033[1;92m1.\x1b[1;92mClone From Friend List..."
+	print "\033[1;97m--\033[1;97m> \033[1;92m2.\x1b[1;92mClone From Public ID..."
 	print "\033[1;97m--\033[1;91m> \033[1;91m0.\x1b[1;91mBack            "
 	pilih_super()
 
