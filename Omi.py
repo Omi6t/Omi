@@ -67,7 +67,7 @@ logo = """
 def tik():
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\x1b[1;93mLoading \x1b[1;97m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r\x1b[1;93mPlease Wait \x1b[1;97m"+o),;sys.stdout.flush();time.sleep(1)
 
 
 back = 0
@@ -196,7 +196,7 @@ def menu():
 		keluar()
 	os.system("clear")
 	print logo
-	print "  \033[1;91m«---------Logged in User Info-----------»"
+	print "  \033[1;97m«---------\033[1;92mLogged in User Info\033[1;97m----------»"
 	print "	  \033[1;93m Name\033[1;93m: \033[1;92m"+nama+"\033[1;97m               "
 	print "	  \033[1;93m ID\033[1;93m: \033[1;92m"+id+"\x1b[1;97m              "
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
@@ -233,7 +233,6 @@ def super():
 		login()
 	os.system('clear')
 	print logo
-	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
 	print "\033[1;97m--\033[1;92m> \033[1;92m1.\x1b[1;92mClone From Friend List..."
 	print "\033[1;97m--\033[1;92m> \033[1;92m2.\x1b[1;92mClone From Public ID..."
 	print "\033[1;97m--\033[1;91m> \033[1;91m0.\033[1;91mBack"
@@ -282,7 +281,7 @@ def pilih_super():
 	for o in titik:
 		print("\r\033[1;93mCloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
 	print
-	print('	\x1b[1;91mTo Stop Process Press CTRL Then Press Z')
+	print('  \x1b[1;91mTo Stop Process Press CTRL Then Press Z')
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
 	
 			
@@ -404,9 +403,9 @@ def pilih_super():
 	p.map(main, id)
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
 	print "  \033[1;91m«---------Developed By Omi------------»"
-	print '\033[1;92m✔\033[1;92mProcess Has Been Completed\033[1;92m....'
-	print"\033[1;92m✔\033[1;92mTotal OK/\x1b[1;93mCP \033[1;91m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(cekpoint))
-	print("\033[1;92m✔\033[1;92mCP File Has Been Saved\033[1;92m:\033[1;97mout/checkpoint.txt")
+	print '\033[1;92mProcess Has Been Completed\033[1;92m....'
+	print"\033[1;92mTotal OK/\x1b[1;93mCP \033[1;91m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(cekpoint))
+	print("\033[1;92mCP File Has Been Saved\033[1;92m:\033[1;97mout/checkpoint.txt")
 	raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
 	menu()
 
