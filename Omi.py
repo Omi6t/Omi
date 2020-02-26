@@ -120,7 +120,7 @@ def login():
 		os.system('clear')
 		print logo
 		jalan(' \033[1;91mWarning: \033[1;93mDo Not Use Your Personal Account' )
-		jalan('         \033[1;93mUse a Fresh Account To Login' )
+		jalan('          \033[1;93mUse a Fresh Account To Login' )
 		print "\033[1;95m«--------------------✧--------------------»"
 		print('	   \033[1;96m【\x1b[1;96mLOGIN WITH FACEBOOK\x1b[1;96m】' )
 		id = raw_input('\033[1;96m[+] \x1b[1;93mID/Email\x1b[1;93m: \x1b[1;96m')
