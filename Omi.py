@@ -196,8 +196,7 @@ def menu():
 		keluar()
 	os.system("clear")
 	print logo
-	print('	   \033[1;96m【\x1b[1;96mLogged in User Info\x1b[1;96m】' )
-	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
+	print "  \033[1;91m«---------Logged in User Info-----------»"
 	print "	  \033[1;93m Name\033[1;93m: \033[1;92m"+nama+"\033[1;97m               "
 	print "	  \033[1;93m ID\033[1;93m: \033[1;92m"+id+"\x1b[1;97m              "
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
@@ -257,12 +256,11 @@ def pilih_super():
 	elif peak =="2":
 		os.system('clear')
 		print logo
-		print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
 		idt = raw_input("\033[1;96m[+] \033[1;93mEnter ID\033[1;93m: \033[1;97m")
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			print"\033[1;93m✔\033[1;93mName\033[1;93m:\033[1;97m "+op["name"]
+			print"\033[1;93mName\033[1;93m:\033[1;97m "+op["name"]
 		except KeyError:
 			print"\033[1;91m✘\x1b[1;91mID Not Found!"
 			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
@@ -278,13 +276,13 @@ def pilih_super():
 		print "\033[1;91m✘\x1b[1;91mFill in correctly"
 		pilih_super()
 	
-	print "\033[1;93m✔\033[1;93mTotal IDs\033[1;93m: \033[1;97m"+str(len(id))
+	print "\033[1;93mTotal IDs\033[1;93m: \033[1;97m"+str(len(id))
 	jalan('\033[1;93mStarting\033[1;93m...')
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\033[1;93m✔\033[1;93mCloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r\033[1;93mCloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
 	print
-	print('\x1b[1;91m✘\x1b[1;91mTo Stop Process Press CTRL Then Press Z')
+	print('	\x1b[1;91mTo Stop Process Press CTRL Then Press Z')
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
 	
 			
