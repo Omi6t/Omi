@@ -123,6 +123,7 @@ def login():
 		jalan('          \033[1;97mUse a Fresh Account To Login' )
 		print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
 		print('	   \033[1;96m【\x1b[1;96mLOGIN WITH FACEBOOK\x1b[1;96m】' )
+		print('	' )
 		id = raw_input('\033[1;96m[+] \x1b[1;93mID/Email\x1b[1;93m: \x1b[1;96m')
 		pwd = raw_input('\033[1;96m[+] \x1b[1;93mPassword\x1b[1;93m: \x1b[1;96m')
 		tik()
@@ -196,7 +197,7 @@ def menu():
 		keluar()
 	os.system("clear")
 	print logo
-	print "  \033[1;97m«---------\033[1;92mLogged in User Info\033[1;97m----------»"
+	print "  \033[1;97m«---------\033[1;92mLogged in User Info\033[1;97m---------»"
 	print "	  \033[1;93m Name\033[1;93m: \033[1;92m"+nama+"\033[1;97m               "
 	print "	  \033[1;93m ID\033[1;93m: \033[1;92m"+id+"\x1b[1;97m              "
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
