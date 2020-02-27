@@ -282,6 +282,7 @@ def pilih_super():
 	titik = ['.   ','..  ','... ']
 	for o in titik:
 		print("\r\033[1;93mCloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
+	
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
 	print('     \x1b[1;91m【To Stop Process Press CTRL+Z】')
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
