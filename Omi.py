@@ -256,6 +256,7 @@ def pilih_super():
 		os.system('clear')
 		print logo
 		idt = raw_input("\033[1;96m[+] \033[1;93mEnter ID\033[1;93m: \033[1;97m")
+		print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
@@ -281,7 +282,7 @@ def pilih_super():
 	for o in titik:
 		print("\r\033[1;93mCloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
 	print
-	print('    \x1b[1;91m【To Stop Process Press CTRL+Z】')
+	print('     \x1b[1;91m【To Stop Process Press CTRL+Z】')
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
 	jalan(' \033[1;93mPlz Wait Cloned Accounts Will Appear Here')
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
