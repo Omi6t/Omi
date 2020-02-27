@@ -67,7 +67,7 @@ logo = """
 def tik():
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\x1b[1;93mPlease Wait \x1b[1;97m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r\x1b[1;93mPlease Wait \x1b[1;93m"+o),;sys.stdout.flush();time.sleep(1)
 
 
 back = 0
@@ -122,7 +122,7 @@ def login():
 		jalan(' \033[1;91mWarning: \033[1;97mDo Not Use Your Personal Account' )
 		jalan('          \033[1;97mUse a Fresh Account To Login' )
 		print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
-		print('	   \033[1;96m【\x1b[1;96mLOGIN WITH FACEBOOK\x1b[1;96m】' )
+		print('	   \033[1;95m【\x1b[1;95mLOGIN WITH FACEBOOK\x1b[1;95m】' )
 		print('	' )
 		id = raw_input('\033[1;96m[+] \x1b[1;93mID/Email\x1b[1;93m: \x1b[1;96m')
 		pwd = raw_input('\033[1;96m[+] \x1b[1;93mPassword\x1b[1;93m: \x1b[1;96m')
@@ -197,9 +197,9 @@ def menu():
 		keluar()
 	os.system("clear")
 	print logo
-	print "  \033[1;97m«---------\033[1;92mLogged in User Info\033[1;97m---------»"
-	print "	  \033[1;93m Name\033[1;93m: \033[1;92m"+nama+"\033[1;97m               "
-	print "	  \033[1;93m ID\033[1;93m: \033[1;92m"+id+"\x1b[1;97m              "
+	print "  \033[1;97m«---------\033[1;95mLogged in User Info\033[1;97m---------»"
+	print "	   \033[1;93m Name\033[1;93m:\033[1;97m"+nama+"\033[1;97m               "
+	print "	   \033[1;93m ID\033[1;93m:\033[1;97m"+id+"\x1b[1;97m              "
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
 	print "\033[1;97m--\033[1;92m> \033[1;92m1.\x1b[1;92mStart Cloning..."
 	print "\033[1;97m--\033[1;91m> \033[1;91m0.\033[1;91mExit            "
@@ -281,8 +281,7 @@ def pilih_super():
 	jalan('\033[1;93mPlease Wait\033[1;93m...')
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\033[1;93mCloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
-	
+		print("\n\033[1;93mCloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
 	print('     \x1b[1;91m【To Stop Process Press CTRL+Z】')
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
