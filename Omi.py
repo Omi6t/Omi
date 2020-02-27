@@ -260,7 +260,7 @@ def pilih_super():
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			print"\033[1;93mName\033[1;93m:\033[1;97m "+op["name"]
+			jalan('\033[1;93mName\033[1;93m:\033[1;97m "+op["name"')
 		except KeyError:
 			print"\x1b[1;91mID Not Found!"
 			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
