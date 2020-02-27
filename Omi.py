@@ -260,7 +260,7 @@ def pilih_super():
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			jalan('\033[1;93mName\033[1;93m:\033[1;97m "+op["name"')
+			jalan('\033[1;93mName\033[1;93m:\033[1;97m ')+op["name"]
 		except KeyError:
 			print"\x1b[1;91mID Not Found!"
 			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
@@ -281,11 +281,11 @@ def pilih_super():
 	titik = ['.   ','..  ','... ']
 	for o in titik:
 		print("\r\033[1;93mCloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
-	print
+	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
 	print('     \x1b[1;91m【To Stop Process Press CTRL+Z】')
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
 	jalan(' \033[1;93mPlz Wait Cloned Accounts Will Appear Here')
-	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
+	
 	
 			
 	def main(arg):
