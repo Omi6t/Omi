@@ -95,7 +95,8 @@ print  """
 \033[1;91mInstagram\033[1;91m: \033[1;93mhttps://www.Instagram.com/Omi6t
 \033[1;91mFacebook\033[1;91m: \033[1;93mhttps://www.facebook.com/Omi6t
 \033[1;91mWhatsapp\033[1;91m: \033[1;93m+923117675174
-\033[1;91m«--------------------\033[1;93m✧\033[1;91m--------------------»"""
+\033[1;91m«--------------------\033[1;93m✧\033[1;91m--------------------»
+\033[1;91m«---------\033[1;93mLogin With Tool\033[1;91m---------»"""
 
 CorrectUsername = "Omi6t"
 CorrectPassword = "Omi"
