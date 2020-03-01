@@ -9,6 +9,8 @@ import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,re
 from multiprocessing.pool import ThreadPool
 from requests.exceptions import ConnectionError
 from mechanize import Browser
+colors=['\033[1;31m','\033[1;32m','\033[1;33m','\033[1;34m','\033[1;35m','\033[1;36m']
+W='\033[0m'
 
 
 reload(sys)
@@ -59,7 +61,10 @@ logo = """
 \033[1;92mY8,        ,8P 88   `8b d8'   88  88  
  \033[1;92mY8a.    .a8P  88    `888'    88  88  
   \033[1;92m`"Y8888Y"'   88     `8'     88  88
-
+  					       """
+  print(random.choice(colors)+logo+W)
+    print("\n")
+print """
 \033[1;97m●▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;92m๑۩۩๑\033[1;97m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬●
 \033[1;97mAuthor©\033[1;97m: \033[1;92mOmi Chaudhary
 \033[1;97mInstagram\033[1;97m: \033[1;92mhttps://www.Instagram.com/Omi6t
