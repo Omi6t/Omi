@@ -9,8 +9,6 @@ import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,re
 from multiprocessing.pool import ThreadPool
 from requests.exceptions import ConnectionError
 from mechanize import Browser
-colors=['\033[1;31m','\033[1;32m','\033[1;33m','\033[1;34m','\033[1;35m','\033[1;36m']
-W='\033[0m'
 
 
 reload(sys)
@@ -53,18 +51,15 @@ def jalan(z):
 
 ##### LOGO #####
 logo = """
-  ,ad8888ba,   88b           d88  88  
- d8"'    `"8b  888b         d888  88  
-d8'        `8b 88`8b       d8'88  88  
-88          88 88 `8b     d8' 88  88  
-88          88 88  `8b   d8'  88  88  
-Y8,        ,8P 88   `8b d8'   88  88  
- Y8a.    .a8P  88    `888'    88  88  
-  `"Y8888Y"'   88     `8'     88  88
-  					       """
-print(random.choice(colors)+logo+W)
-print("\n")
-print """
+  \033[1;97m,ad8888ba,   88b           d88  88  
+ \033[1;97md8"'    `"8b  888b         d888  88  
+\033[1;92md8'        `8b 88`8b       d8'88  88  
+\033[1;92m88          88 88 `8b     d8' 88  88  
+\033[1;92m88          88 88  `8b   d8'  88  88  
+\033[1;92mY8,        ,8P 88   `8b d8'   88  88  
+ \033[1;92mY8a.    .a8P  88    `888'    88  88  
+  \033[1;92m`"Y8888Y"'   88     `8'     88  88
+
 \033[1;97m●▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;92m๑۩۩๑\033[1;97m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬●
 \033[1;97mAuthor©\033[1;97m: \033[1;92mOmi Chaudhary
 \033[1;97mInstagram\033[1;97m: \033[1;92mhttps://www.Instagram.com/Omi6t
@@ -100,7 +95,6 @@ print  """
 \033[1;97mFacebook\033[1;97m: \033[1;92mhttps://www.facebook.com/Omi6t
 \033[1;97mWhatsapp\033[1;97m: \033[1;92m+923117675174
 \033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"""
-print('\033[1;36;40m<─────────────── v.1.2 ───────────────>')
 
 CorrectUsername = "Omi6t"
 CorrectPassword = "Omi"
