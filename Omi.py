@@ -1,6 +1,7 @@
 #!/usr/bin/python2
 #coding=utf-8
-#Developed By Omi_Chaudhary....
+#The Credit For This Code Goes To Omi Chaudhary
+#If You Wanna Take Credits For This Code, Please Look Yourself Again...
 #Reserved2020
 
 
