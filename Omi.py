@@ -62,8 +62,8 @@ Y8,        ,8P 88   `8b d8'   88  88
  Y8a.    .a8P  88    `888'    88  88  
   `"Y8888Y"'   88     `8'     88  88
   					       """
-  print(random.choice(colors)+logo+W)
-    print("\n")
+print(random.choice(colors)+logo+W)
+print("\n")
 print """
 \033[1;97m●▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;92m๑۩۩๑\033[1;97m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬●
 \033[1;97mAuthor©\033[1;97m: \033[1;92mOmi Chaudhary
