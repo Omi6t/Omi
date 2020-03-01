@@ -1,5 +1,7 @@
 #!/usr/bin/python2
 #coding=utf-8
+#Developed By Omi_Chaudhary....
+#Reserved2020
 
 
 import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,requests,mechanize
