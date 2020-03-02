@@ -87,7 +87,7 @@ print  """
                 '.__/o   o\__.'
                    {=  ^  =}
                     >  -  <
-    ____________.""`-------`"".___________
+  ______________.""`-------`"".____________
 | \033[1;92mProcess Has Been Completed |
     \033[1;92mCP File Has Been Saved\033[1;92m:\033[1;97mout/checkpoint.txt
     
