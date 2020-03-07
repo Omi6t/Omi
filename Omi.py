@@ -95,8 +95,14 @@ print  """
 \033[1;91mInstagram\033[1;91m: \033[1;93mhttps://www.Instagram.com/Omi6t
 \033[1;91mFacebook\033[1;91m: \033[1;93mhttps://www.facebook.com/Omi6t
 \033[1;91mWhatsapp\033[1;91m: \033[1;93m+923117675174
-\033[1;91m«--------------------\033[1;93m✧\033[1;91m--------------------»
-\033[1;91m«-------------\033[1;93mLogin With Tool\033[1;91m-------------»"""
+\033[1;91m«--------------------\033[1;93m✧\033[1;91m--------------------»"""
+jalan('              \033[1;91mREAD CAREFULLY:')
+jalan("\033[1;97m   It's not in Commands Control to get a   ")
+jalan('\033[1;97m   New or Old Account,It Totally Depends   ')
+jalan('\033[1;97m   on Friends List And the Accounts that   ')
+jalan("\033[1;97m   goes to Checkpoint is due to Facebook ")
+jalan("\033[1;97m    Security,That's not Commands Issue.")
+print "\033[1;91m«-------------\033[1;93mLogin With Tool\033[1;91m-------------»"
 
 CorrectUsername = "Omi6t"
 CorrectPassword = "Omi"
@@ -412,13 +418,6 @@ def pilih_super():
 	p.map(main, id)
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
 	print "  \033[1;91m«---------Developed By Omi------------»"
-	jalan('              \033[1;91mREAD CAREFULLY:')
-	jalan("\033[1;97m   It's not in Commands Control to get a   ")
-	jalan('\033[1;97m   New or Old Account,It Totally Depends   ')
-	jalan('\033[1;97m   on Friends List And the Accounts that   ')
-	jalan("\033[1;97m   goes to Checkpoint is due to Facebook ")
-	jalan("\033[1;97m    Security,That's not Commands Issue.")
-	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
 	print '\033[1;92mProcess Has Been Completed\033[1;92m....'
 	print"\033[1;92mTotal OK/\x1b[1;93mCP \033[1;91m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(cekpoint))
 	print """
