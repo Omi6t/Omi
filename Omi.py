@@ -291,10 +291,9 @@ def pilih_super():
 	jalan('              \033[1;91mREAD CAREFULLY:')
 	jalan("\033[1;97m   It's not in Commands Control to get a   ")
 	jalan('\033[1;97m   New or Old Account,It Totally Depends   ')
-	jalan('\033[1;97m   on Friends List And the accounts that   ')
-	jalan("\033[1;97m   goes to Checkpoint is due to Facebook's ")
-	jalan('\033[1;97m   Security,Commands is not Responsible    ')
-	jalan('\033[1;97m                 for this.')
+	jalan('\033[1;97m   on Friends List And the Accounts that   ')
+	jalan("\033[1;97m   goes to Checkpoint is due to Facebook ")
+	jalan("\033[1;97m      Security,That's not Commands Issue.")
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
 	jalan(' \033[1;93mPlz Wait Cloned Accounts Will Appear Here')
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
