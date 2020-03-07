@@ -48,7 +48,7 @@ def jalan(z):
 		sys.stdout.flush()
 		time.sleep(0.07)
 
-
+#Dev:Omi_Ch
 ##### LOGO #####
 logo = """
         \033[1;97m::::::::    :::   :::   ::::::::::: 
@@ -113,7 +113,7 @@ while (loop == 'true'):
     if (username == CorrectUsername):
     	password = raw_input("\033[1;96m🔐 \x1b[1;91mTool Password \x1b[1;91m»» \x1b[1;93m")
         if (password == CorrectPassword):
-            print "Logged in successfully as " + username
+            print "Logged in successfully as " + username #Dev:Omi_Ch
 	    time.sleep(2)
             loop = 'false'
         else:
@@ -207,7 +207,7 @@ def menu():
 	except requests.exceptions.ConnectionError:
 		print"\x1b[1;91mThere is no internet connection"
 		keluar()
-	os.system("clear")
+	os.system("clear") #Dev:Omi_Ch
 	print logo
 	print "  \033[1;97m«---------\033[1;95mLogged in User Info\033[1;97m---------»"
 	print "	   \033[1;93m Name\033[1;93m:\033[1;97m"+nama+"\033[1;97m               "
@@ -306,7 +306,7 @@ def pilih_super():
 		try:
 			os.mkdir('out')
 		except OSError:
-			pass
+			pass #Dev:Omi_Ch
 		try:
 			a = requests.get('https://graph.facebook.com/'+user+'/?access_token='+toket)
 			b = json.loads(a.text)
@@ -417,7 +417,7 @@ def pilih_super():
 	p = ThreadPool(30)
 	p.map(main, id)
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
-	print "  \033[1;91m«---------Developed By Omi------------»"
+	print "  \033[1;91m«---------Developed By Omi------------»" #Dev:Omi_Ch
 	print '\033[1;92mProcess Has Been Completed\033[1;92m....'
 	print"\033[1;92mTotal OK/\x1b[1;93mCP \033[1;91m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(cekpoint))
 	print """
