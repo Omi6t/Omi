@@ -96,7 +96,7 @@ print  """
 \033[1;91mFacebook\033[1;91m: \033[1;93mhttps://www.facebook.com/Omi6t
 \033[1;91mWhatsapp\033[1;91m: \033[1;93m+923117675174
 \033[1;91m«-----------------------\033[1;93m✧✧\033[1;91m-----------------------»\033[1;97m"""
-jalan("\033[7;91m Disclaimer:\033[0m\033[1;97mDeveloper Assume No Liability and Not")
+jalan("\033[1;41mDisclaimer:\033[0m \033[1;97mDeveloper Assume No Liability and Not")
 jalan("\033[1;97m            Responsible for any Misuse or Damage.")
 print "\033[1;91m«-----------------------\033[1;93m✧✧\033[1;91m-----------------------»\033[1;97m"
 print "                 \033[1;41mREAD CAREFULLY\033[0m"
