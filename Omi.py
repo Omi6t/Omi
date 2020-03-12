@@ -133,11 +133,10 @@ def login():
 	except (KeyError,IOError):
 		os.system('clear')
 		print logo
-		jalan("\033[1;41mWarning\033[0m \033[1;97mPlease Don't Use Your Personal/Old Account" )
-		jalan('        \033[1;97mUse a Fresh Account To Login.Thanks!...' )
-		print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
-		print('	   \033[1;95m【\x1b[1;95mLOGIN WITH FACEBOOK\x1b[1;95m】' )
-		print('	' )
+		jalan("\033[1;41mWarning:\033[0m\033[1;97mPlease Don't Use Your Personal/Old Account" )
+		jalan('         \033[1;97mUse a Fresh Account To Login.Thanks!...' )
+		print "\033[1;97m«-----------------------\033[1;92m✧✧\033[1;97m-----------------------»"
+		print('              \033[1;95m【\x1b[1;95mLOGIN WITH FACEBOOK\x1b[1;95m】\n' )
 		id = raw_input('\033[1;96m[+] \x1b[1;93mID/Email\x1b[1;93m: \x1b[1;96m')
 		pwd = raw_input('\033[1;96m[+] \x1b[1;93mPassword\x1b[1;93m: \x1b[1;96m')
 		tik()
