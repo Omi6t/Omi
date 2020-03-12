@@ -104,7 +104,7 @@ print "\033[1;97mIt is not in Commands Control to get a New or Old"
 print "\033[1;97mAccount,It Totally Depends on Friends List And the"
 print "\033[1;97mAccount that goes to Checkpoint is due to Facebook"
 print "\033[1;97mSecurity,Tool is not Responsible for this Thing..."
-print "\033[1;94m«-----------------\033[1;97mLogin With Tool\033[1;94m----------------»"
+print "\033[1;94m«-----------------\033[1;95mLogin With Tool\033[1;94m----------------»"
 
 CorrectUsername = "Omi6t"
 CorrectPassword = "Omi"
