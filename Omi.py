@@ -98,6 +98,7 @@ print  """
 \033[1;91m«-----------------------\033[1;93m✧✧\033[1;91m-----------------------»"""
 jalan("\033[7;91mDisclaimer:\033[0m \033[1;97mDeveloper Assume No Liability and Not")
 jalan("\033[1;97m            Responsible for any Misuse or Damage.")
+print "«-----------------------\033[1;93m✧✧\033[1;91m-----------------------»
 print "                 \033[1;41mREAD CAREFULLY\033[0m"
 print "\033[1;97mIt is not in Commands Control to get a New or Old"
 print "\033[1;97mAccount,It Totally Depends on Friends List And the"
