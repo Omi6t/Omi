@@ -133,8 +133,8 @@ def login():
 	except (KeyError,IOError):
 		os.system('clear')
 		print logo
-		jalan(' \033[1;91mWarning: \033[1;97mDo Not Use Your Personal Account' )
-		jalan('          \033[1;97mUse a Fresh Account To Login' )
+		jalan("\033[1;41mWarning\033[0m \033[1;97mPlease Don't Use Your Personal/Old Account" )
+		jalan('        \033[1;97mUse a Fresh Account To Login.Thanks!...' )
 		print "\033[1;97m«--------------------\033[1;92m✧\033[1;97m--------------------»"
 		print('	   \033[1;95m【\x1b[1;95mLOGIN WITH FACEBOOK\x1b[1;95m】' )
 		print('	' )
