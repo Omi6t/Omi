@@ -99,7 +99,7 @@ print  """
 jalan("\033[1;41mDisclaimer:\033[0m \033[1;97mDeveloper Assume No Liability and Not")
 jalan("\033[1;97m            Responsible for any Misuse or Damage.")
 print "\033[1;91m«-----------------------\033[1;93m✧✧\033[1;91m-----------------------»\033[1;97m"
-print "                 \033[1;43mREAD CAREFULLY\033[0m"
+print "                 \033[7;91mREAD CAREFULLY\033[0m"
 print "\033[1;97mIt is not in Commands Control to get a New or Old"
 print "\033[1;97mAccount,It Totally Depends on Friends List And the"
 print "\033[1;97mAccount that goes to Checkpoint is due to Facebook"
