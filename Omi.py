@@ -90,30 +90,30 @@ print  """
     \033[1;91m\ \((_)/ / __| | ((/ __/ _ \|  \/  | __| 
      \033[1;91m\ \/\/ /| _|| |__| (_| (_) | |\/| | _|  
       \033[1;91m\_/\_/ |___|____|\___\___/|_|  |_|___|v1.0
-\033[1;91m●▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;93m๑۩۩۩๑\033[1;91m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬●
-\033[1;91mAuthor©\033[1;91m: \033[1;93mOmi Chaudhary
-\033[1;91mInstagram\033[1;91m: \033[1;93mhttps://www.Instagram.com/Omi6t
-\033[1;91mFacebook\033[1;91m: \033[1;93mhttps://www.facebook.com/Omi6t
-\033[1;91mWhatsapp\033[1;91m: \033[1;93m+923117675174
-\033[1;91m«-----------------------\033[1;93m✧✧\033[1;91m-----------------------»\033[1;97m"""
+\033[1;94m●▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;93m๑۩۩۩๑\033[1;94m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬●
+\033[1;94mAuthor©\033[1;91m: \033[1;93mOmi Chaudhary
+\033[1;94mInstagram\033[1;91m: \033[1;93mhttps://www.Instagram.com/Omi6t
+\033[1;94mFacebook\033[1;91m: \033[1;93mhttps://www.facebook.com/Omi6t
+\033[1;94mWhatsapp\033[1;91m: \033[1;93m+923117675174
+\033[1;94m«-----------------------\033[1;93m✧✧\033[1;94m-----------------------»\033[1;97m"""
 jalan("\033[1;41mDisclaimer:\033[0m \033[1;97mDeveloper Assume No Liability and Not")
 jalan("\033[1;97m            Responsible for any Misuse or Damage.")
-print "\033[1;91m«-----------------------\033[1;93m✧✧\033[1;91m-----------------------»\033[1;97m"
+print "\033[1;94m«-----------------------\033[1;93m✧✧\033[1;94m-----------------------»\033[1;97m"
 print "                 \033[7;91mREAD CAREFULLY\033[0m"
 print "\033[1;97mIt is not in Commands Control to get a New or Old"
 print "\033[1;97mAccount,It Totally Depends on Friends List And the"
 print "\033[1;97mAccount that goes to Checkpoint is due to Facebook"
 print "\033[1;97mSecurity,Tool is not Responsible for this Thing..."
-print "\033[1;91m«-----------------\033[1;93mLogin With Tool\033[1;91m----------------»"
+print "\033[1;94m«-----------------\033[1;93mLogin With Tool\033[1;94m----------------»"
 
 CorrectUsername = "Omi6t"
 CorrectPassword = "Omi"
 
 loop = 'true'
 while (loop == 'true'):
-    username = raw_input("\033[1;96m🔐 \x1b[1;91mTool Username \x1b[1;91m»» \x1b[1;93m")
+    username = raw_input("\033[1;96m🔐 \x1b[1;94mTool Username \x1b[1;94m»» \x1b[1;93m")
     if (username == CorrectUsername):
-    	password = raw_input("\033[1;96m🔐 \x1b[1;91mTool Password \x1b[1;91m»» \x1b[1;93m")
+    	password = raw_input("\033[1;96m🔐 \x1b[1;94mTool Password \x1b[1;94m»» \x1b[1;93m")
         if (password == CorrectPassword):
             print "Logged in successfully as " + username
 	    time.sleep(2)
