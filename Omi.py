@@ -86,15 +86,15 @@ print  """
 \033[1;97m | |     / / ____/ /   / ____/ __ \/  |/  / ____/\033[0m
 \033[1;97m | | /| / / __/ / /   / /   / / / / /|_/ / __/   \033[0m
 \033[1;97m | |/ |/ / /___/ /___/ /___/ /_/ / /  / / /___   \033[0m
-\033[1;97m |__/|__/_____/_____/\____/\____/_/  /_/_____/\033[3;97mv1.0\033[0m
+\033[1;97m |__/|__/_____/_____/\____/\____/_/  /_/_____/\033[3;97mv1.1\033[0m
 \033[1;94m●▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\033[1;97m๑۩۩۩๑\033[1;94m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬●
-\033[1;94mAuthor©\033[1;91m: \033[1;97mOmi Chaudhary
-\033[1;94mInstagram\033[1;91m: \033[1;97mhttps://www.Instagram.com/Omi6t
-\033[1;94mFacebook\033[1;91m: \033[1;97mhttps://www.facebook.com/Omi6t
-\033[1;94mWhatsapp\033[1;91m: \033[1;97m+923117675174
+\033[1;94mAuthor©: \033[1;97mOmi Chaudhary
+\033[1;94mInstagram: \033[1;97mhttps://www.Instagram.com/Omi6t
+\033[1;94mFacebook: \033[1;97mhttps://www.facebook.com/Omi6t
+\033[1;94mWhatsapp: \033[1;97m+923117675174
 \033[1;94m«-----------------------\033[1;97m✧✧\033[1;94m-----------------------»\033[1;97m"""
 jalan("\033[1;41mDisclaimer:\033[0m \033[1;97mDeveloper Assume No Liability and Not")
-jalan("\033[1;97m            Responsible for any Misuse or Damage.")
+jalan("\033[1;97m	    Responsible for any Misuse or Damage.")
 print "\033[1;94m«-----------------------\033[1;97m✧✧\033[1;94m-----------------------»\033[1;97m"
 print "                 \033[7;91mREAD CAREFULLY\033[0m"
 print "\033[1;97mIt is not in Commands Control to get a New or Old"
@@ -134,8 +134,8 @@ def login():
 		jalan('         \033[1;97mUse a Fresh Account To Login.Thanks!...' )
 		print "\033[1;97m«-----------------------\033[1;92m✧✧\033[1;97m-----------------------»"
 		print('              \033[1;95m【\x1b[1;95mLOGIN WITH FACEBOOK\x1b[1;95m】\n' )
-		id = raw_input('\033[1;97m--\033[1;93m>\x1b[1;93mID/Email\x1b[1;93m: \x1b[1;96m')
-		pwd = raw_input('\033[1;97m--\033[1;93m>\x1b[1;93mPassword\x1b[1;93m: \x1b[1;96m')
+		id = raw_input('\033[1;97m--\033[1;92m> Username: \x1b[1;97m')
+		pwd = raw_input('\033[1;97m--\033[1;92m> Password: \x1b[1;97m')
 		tik()
 		try:
 			br.open('https://m.facebook.com')
@@ -266,7 +266,7 @@ def pilih_super():
 	elif peak =="2":
 		os.system('clear')
 		print logo
-		idt = raw_input("\033[1;97m--\033[1;93m>\033[1;93mEnter ID\033[1;93m: \033[1;97m")
+		idt = raw_input("\033[1;97m--\033[1;92m> Enter ID: \033[1;97m")
 		print "\033[1;97m«-----------------------\033[1;92m✧✧\033[1;97m-----------------------»"
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
