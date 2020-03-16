@@ -68,7 +68,7 @@ logo = """
 def tik():
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\x1b[1;93mPlease Wait \x1b[1;93m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r\x1b[1;92mPlease Wait \x1b[1;92m"+o),;sys.stdout.flush();time.sleep(0.5)
 
 
 back = 0
@@ -208,8 +208,8 @@ def menu():
 	os.system("clear")
 	print logo
 	print "\033[1;97m«---------------\033[1;95mLogged in User Info\033[1;97m--------------»"
-	print "\033[1;93m Name\033[1;93m:\033[1;97m"+nama+"\033[1;97m"
-	print "\033[1;93m ID\033[1;93m:\033[1;97m"+id+"\x1b[1;97m"
+	print "\033[1;93m		Name\033[1;93m:\033[1;97m"+nama+"\033[1;97m"
+	print "\033[1;93m		ID\033[1;93m:\033[1;97m"+id+"\x1b[1;97m"
 	print "\033[1;97m«-----------------------\033[1;92m✧✧\033[1;97m-----------------------»"
 	print "\033[1;97m--\033[1;92m> \033[1;92m1.\x1b[1;92mStart Cloning..."
 	print "\033[1;97m--\033[1;91m> \033[1;91m0.\033[1;91mExit            "
@@ -258,7 +258,7 @@ def pilih_super():
 		os.system('clear')
 		print logo
 		print "\033[1;97m«-----------------------\033[1;92m✧✧\033[1;97m-----------------------»"
-		jalan('\033[1;93mGetting IDs \033[1;97m...')
+		jalan('\033[1;92mGetting Accounts...')
 		r = requests.get("https://graph.facebook.com/me/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for s in z['data']:
@@ -271,12 +271,12 @@ def pilih_super():
 		try:
 			jok = requests.get("https://graph.facebook.com/"+idt+"?access_token="+toket)
 			op = json.loads(jok.text)
-			print"\033[1;93mName\033[1;93m:\033[1;97m "+op["name"]
+			print"\033[1;94mName:\033[1;97m "+op["name"]
 		except KeyError:
 			print"\x1b[1;91mID Not Found!"
 			raw_input("\n\033[1;96m[\033[1;97mBack\033[1;96m]")
 			super()
-		print"\033[1;93mGetting IDs\033[1;93m..."
+		print"\033[1;94mGetting Accounts..."
 		r = requests.get("https://graph.facebook.com/"+idt+"/friends?access_token="+toket)
 		z = json.loads(r.text)
 		for i in z['data']:
@@ -287,14 +287,14 @@ def pilih_super():
 		print "\x1b[1;91mFill in correctly"
 		pilih_super()
 	
-	print "\033[1;93mTotal IDs\033[1;93m: \033[1;97m"+str(len(id))
-	jalan('\033[1;93mPlease Wait\033[1;93m...')
+	print "\033[1;94mTotal Accounts: \033[1;97m"+str(len(id))
+	jalan('\033[1;94mPlease Wait...')
 	titik = ['.   ','..  ','... ']
 	for o in titik:
-		print("\r\033[1;93mCloning\033[1;93m"+o),;sys.stdout.flush();time.sleep(1)
+		print("\r\033[1;94mStarting\033[1;94m"+o),;sys.stdout.flush();time.sleep(1)
 	print "\n\033[1;97m«--------\x1b[1;91m【To Stop Process Press CTRL+Z】\033[1;97m--------»"
 	print "\033[1;97m«-----------------------\033[1;92m✧✧\033[1;97m-----------------------»"
-	jalan('   \033[1;93mPlease Wait Cloned Accounts Will Appear Here')
+	jalan('\033[1;42m   Please Wait Cloned Accounts Will Appear Here   \033[0m')
 	print "\033[1;97m«-----------------------\033[1;92m✧✧\033[1;97m-----------------------»"
 	
 			
