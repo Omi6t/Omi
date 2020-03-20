@@ -30,4 +30,4 @@ jalan("\033[1;41mSorry!:\033[0m \033[1;97mTool is not Working at this Moment due
 jalan("\033[1;97mFB Policy.I'm Working on it now,Stay Tuned.Thanks")
 
 raw_input("\033[1;91mPress Enter to Exit")
-os.system("exit")
+keluar()
